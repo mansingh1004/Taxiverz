@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxiverz - Your Travel Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar sticky-nav" id="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
+            </div>
+            <div class="nav-menu" id="nav-menu-sticky">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="tours.html" class="nav-link">Tours</a>
+                <a href="car-rental.html" class="nav-link">Car Rental</a>
+                <a href="wedding.html" class="nav-link">Wedding Cars</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="mobile-menu-sticky">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Section with Navigation -->
+    <section class="carousel-section">
+        <!-- Navigation Bar -->
+        <nav class="navbar carousel-nav-bar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="tours.html" class="nav-link">Tours</a>
+                    <a href="car-rental.html" class="nav-link">Car Rental</a>
+                    <a href="wedding.html" class="nav-link">Wedding Cars</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <div class="slide-bg slide-1"></div>
+                <div class="slide-content">
+                    <h2>Premium Taxi Service</h2>
+                    <p>Experience luxury travel with our premium fleet</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-bg slide-2"></div>
+                <div class="slide-content">
+                    <h2>24/7 Available</h2>
+                    <p>Round the clock service for your convenience</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-bg slide-3"></div>
+                <div class="slide-content">
+                    <h2>Safe & Secure</h2>
+                    <p>Verified drivers and GPS tracking for safety</p>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button class="nav-dot active" data-slide="0"></button>
+                <button class="nav-dot" data-slide="1"></button>
+                <button class="nav-dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Content Section -->
+    <section id="home" class="hero-main">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-description">
+                    <h1>Taxiverz - Your Travel Partner</h1>
+                    <p>Experience the best taxi service in India with our professional drivers and well-maintained vehicles. We provide safe, reliable, and comfortable travel solutions for all your transportation needs.</p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Safe & Secure</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Service</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Best Prices</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-form">
+                    <div class="booking-form">
+                        <h3>Book Your Ride</h3>
+                        <div class="trip-type">
+                            <button class="trip-btn active" data-type="oneway">One Way</button>
+                            <button class="trip-btn" data-type="roundtrip">Round Trip</button>
+                        </div>
+                        <div class="form-row">
+                            <input type="text" placeholder="Pickup Location" class="input-field">
+                            <input type="text" placeholder="Drop Location" class="input-field">
+                        </div>
+                        <div class="form-row">
+                            <input type="datetime-local" class="input-field">
+                            <select class="input-field">
+                                <option>Select Car Type</option>
+                                <option>Sedan</option>
+                                <option>SUV</option>
+                                <option>Hatchback</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary">Get Fare Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Packages Section -->
+    <section class="tour-packages">
+        <div class="container">
+            <h2>Popular Tour Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h4>Delhi to Manali</h4>
+                    <p>3 Days / 2 Nights</p>
+                    <div class="package-price">₹8,500</div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h4>Mumbai to Goa</h4>
+                    <p>2 Days / 1 Night</p>
+                    <div class="package-price">₹6,200</div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fas fa-temple-hindu"></i>
+                    </div>
+                    <h4>Golden Triangle</h4>
+                    <p>5 Days / 4 Nights</p>
+                    <div class="package-price">₹12,000</div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h4>Kerala Backwaters</h4>
+                    <p>4 Days / 3 Nights</p>
+                    <div class="package-price">₹9,800</div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fas fa-mountain-sun"></i>
+                    </div>
+                    <h4>Shimla Kullu</h4>
+                    <p>3 Days / 2 Nights</p>
+                    <div class="package-price">₹7,500</div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h4>Andaman Islands</h4>
+                    <p>6 Days / 5 Nights</p>
+                    <div class="package-price">₹15,000</div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h4>Rajasthan Royal</h4>
+                    <p>7 Days / 6 Nights</p>
+                    <div class="package-price">₹18,500</div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h4>Kashmir Valley</h4>
+                    <p>5 Days / 4 Nights</p>
+                    <div class="package-price">₹13,200</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Services</h2>
+                <p>Choose from our wide range of transportation solutions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Local Taxi</h3>
+                        <p>Quick and comfortable rides within city limits with professional drivers</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> AC Vehicles</li>
+                            <li><i class="fas fa-check"></i> GPS Tracking</li>
+                            <li><i class="fas fa-check"></i> 24/7 Available</li>
+                        </ul>
+                        <div class="service-price">Starting ₹8/km</div>
+                        <button class="service-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Outstation</h3>
+                        <p>Comfortable long-distance travel to any destination across India</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Experienced Drivers</li>
+                            <li><i class="fas fa-check"></i> Well Maintained Cars</li>
+                            <li><i class="fas fa-check"></i> Flexible Packages</li>
+                        </ul>
+                        <div class="service-price">Starting ₹12/km</div>
+                        <button class="service-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Airport Transfer</h3>
+                        <p>Reliable pickup and drop services to all major airports</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Flight Tracking</li>
+                            <li><i class="fas fa-check"></i> Meet & Greet</li>
+                            <li><i class="fas fa-check"></i> Fixed Rates</li>
+                        </ul>
+                        <div class="service-price">Fixed Rates</div>
+                        <button class="service-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Car Rental</h3>
+                        <p>Hourly and daily car rental with experienced drivers</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Multiple Car Options</li>
+                            <li><i class="fas fa-check"></i> Hourly/Daily Rates</li>
+                            <li><i class="fas fa-check"></i> Corporate Packages</li>
+                        </ul>
+                        <div class="service-price">₹150/hour</div>
+                        <button class="service-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Taxiverz?</h2>
+                <p>We are committed to providing the best travel experience</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Safe & Secure</h4>
+                    <p>All our drivers are verified and vehicles are equipped with GPS tracking for your safety</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h4>Best Prices</h4>
+                    <p>Transparent pricing with no hidden charges. Get the best value for your money</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>On Time Service</h4>
+                    <p>Punctual service guaranteed. We value your time and ensure timely pickups</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Round the clock customer support to assist you with any queries or concerns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Read reviews from our satisfied customers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Excellent service! The driver was punctual and the car was clean. Highly recommended for airport transfers."</p>
+                        <div class="customer-info">
+                            <h5>Rahul Sharma</h5>
+                            <span>Business Traveler</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Great experience with Taxiverz. Professional drivers and reasonable rates. Will definitely use again."</p>
+                        <div class="customer-info">
+                            <h5>Priya Patel</h5>
+                            <span>Regular Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Perfect for outstation trips. The car was comfortable and the driver was very helpful throughout the journey."</p>
+                        <div class="customer-info">
+                            <h5>Amit Kumar</h5>
+                            <span>Family Traveler</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Taxiverz</h2>
+                    <p>With over 5 years of experience in the transportation industry, Taxiverz has become a trusted name for reliable and comfortable travel solutions across India. We pride ourselves on providing exceptional service with a fleet of well-maintained vehicles and professional drivers.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>10K+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Cities Covered</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Service Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-car fa-5x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@taxiverz.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Mumbai, India</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="footer-logo-img">
+                    </div>
+                    <p>Your trusted travel partner</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="tours.html">Tours</a>
+                    <a href="car-rental.html">Car Rental</a>
+                    <a href="wedding.html">Wedding Cars</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Taxiverz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
