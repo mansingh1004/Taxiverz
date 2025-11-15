@@ -48,7 +48,7 @@ body {
 }
 
 .nav-logo h2 {
-    color: #FF6600;
+    color: #ff5800;
     font-size: 1.8rem;
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #FF6600;
+    color: #ff5800;
 }
 
 .nav-toggle {
@@ -146,11 +146,11 @@ body {
 }
 
 .slide-1 {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    background: linear-gradient(135deg, #ff5800 0%, #cc4a00 100%);
 }
 
 .slide-2 {
-    background: linear-gradient(135deg, #FF6600 0%, #E55A00 100%);
+    background: linear-gradient(135deg, #ff5800 0%, #cc4a00 100%);
 }
 
 .slide-3 {
@@ -237,7 +237,7 @@ body {
 }
 
 .feature-item i {
-    color: #FF6600;
+    color: #ff5800;
     font-size: 1.2rem;
 }
 
@@ -256,7 +256,7 @@ body {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
     width: 100%;
     max-width: 400px;
 }
@@ -287,7 +287,7 @@ body {
 }
 
 .trip-btn.active {
-    background: #FF6600;
+    background: #ff5800;
     color: white;
 }
 
@@ -310,7 +310,7 @@ body {
 
 .input-field:focus {
     outline: none;
-    border-color: #FF6600;
+    border-color: #ff5800;
 }
 
 .booking-form select.input-field {
@@ -318,7 +318,7 @@ body {
 }
 
 .btn-primary {
-    background: #FF6600;
+    background: #ff5800;
     color: white;
     border: none;
     padding: 15px 40px;
@@ -332,9 +332,9 @@ body {
 }
 
 .btn-primary:hover {
-    background: #E55A00;
+    background: #cc4a00;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 88, 0, 0.3);
 }
 
 /* Section Headers */
@@ -381,7 +381,7 @@ body {
 }
 
 .service-icon {
-    background: linear-gradient(135deg, #FF6600, #E55A00);
+    background: linear-gradient(135deg, #ff5800, #cc4a00);
     padding: 2rem;
     text-align: center;
 }
@@ -420,14 +420,14 @@ body {
 }
 
 .service-features li i {
-    color: #FF6600;
+    color: #ff5800;
     margin-right: 0.5rem;
     font-size: 0.9rem;
 }
 
 .service-price {
-    background: #FFD700;
-    color: #000;
+    background: #ff5800;
+    color: white;
     padding: 10px 20px;
     border-radius: 25px;
     font-weight: 600;
@@ -436,7 +436,7 @@ body {
 }
 
 .service-btn {
-    background: #FF6600;
+    background: #ff5800;
     color: white;
     border: none;
     padding: 12px 30px;
@@ -448,7 +448,7 @@ body {
 }
 
 .service-btn:hover {
-    background: #E55A00;
+    background: #cc4a00;
     transform: translateY(-2px);
 }
 
@@ -478,7 +478,7 @@ body {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: all 0.3s;
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
 }
 
 .package-card:hover {
@@ -489,7 +489,7 @@ body {
 .package-image {
     width: 80px;
     height: 80px;
-    background: #FF6600;
+    background: #ff5800;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -514,8 +514,8 @@ body {
 }
 
 .package-price {
-    background: #FFD700;
-    color: #000;
+    background: #ff5800;
+    color: white;
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: 600;
@@ -553,7 +553,7 @@ body {
 .feature-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #FFD700, #FFA500);
+    background: linear-gradient(135deg, #ff5800, #cc4a00);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -607,7 +607,7 @@ body {
 }
 
 .stars i {
-    color: #FFD700;
+    color: #ff5800;
     margin-right: 0.2rem;
 }
 
@@ -624,7 +624,7 @@ body {
 }
 
 .customer-info span {
-    color: #FF6600;
+    color: #ff5800;
     font-size: 0.9rem;
 }
 
@@ -664,7 +664,7 @@ body {
 }
 
 .about-text li i {
-    color: #FF6600;
+    color: #ff5800;
 }
 
 .about-image {
@@ -675,12 +675,12 @@ body {
 .image-placeholder {
     width: 300px;
     height: 300px;
-    background: #FFD700;
+    background: #ff5800;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
+    color: white;
 }
 
 .about-stats {
@@ -695,7 +695,7 @@ body {
 
 .stat-item h3 {
     font-size: 2rem;
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 0.5rem;
 }
 
@@ -784,7 +784,7 @@ body {
 
 .office-item i {
     font-size: 2.5rem;
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 0.5rem;
 }
 
@@ -797,7 +797,7 @@ body {
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -833,7 +833,7 @@ body {
 .footer-section h3,
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: #FF6600;
+    color: #ff5800;
 }
 
 .footer-section a {
@@ -845,7 +845,7 @@ body {
 }
 
 .footer-section a:hover {
-    color: #FF6600;
+    color: #ff5800;
 }
 
 .social-links {
@@ -866,7 +866,7 @@ body {
 }
 
 .nav-link.active {
-    color: #FF6600;
+    color: #ff5800;
     font-weight: 600;
 }
 
@@ -884,8 +884,8 @@ body {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    color: #000;
+    background: linear-gradient(135deg, #ff5800 0%, #cc4a00 100%);
+    color: white;
     padding: 120px 0 60px;
     text-align: center;
     margin-top: 80px;
@@ -926,7 +926,7 @@ body {
 .about-text h3 {
     font-size: 1.8rem;
     margin-top: 2rem;
-    color: #FF6600;
+    color: #ff5800;
 }
 
 .about-text p {
@@ -952,7 +952,7 @@ body {
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
     transition: all 0.3s;
 }
 
@@ -963,13 +963,13 @@ body {
 
 .stat-card i {
     font-size: 3rem;
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 1rem;
 }
 
 .stat-card h3 {
     font-size: 2.5rem;
-    color: #FFD700;
+    color: #ff5800;
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
@@ -990,7 +990,7 @@ body {
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
     transition: all 0.3s;
 }
 
@@ -1002,7 +1002,7 @@ body {
 .team-image {
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, #FF6600, #E55A00);
+    background: linear-gradient(135deg, #ff5800, #cc4a00);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1018,7 +1018,7 @@ body {
 }
 
 .team-card p {
-    color: #FF6600;
+    color: #ff5800;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -1046,7 +1046,7 @@ body {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: all 0.3s;
-    border: 1px solid #FFD700;
+    border: 1px solid #ff5800;
 }
 
 .value-card:hover {
@@ -1056,7 +1056,7 @@ body {
 
 .value-card i {
     font-size: 3rem;
-    color: #FFD700;
+    color: #ff5800;
     margin-bottom: 1rem;
 }
 
@@ -1124,7 +1124,7 @@ body {
 
 .contact-item i {
     font-size: 2.5rem;
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 0.5rem;
 }
 
@@ -1156,7 +1156,7 @@ body {
 
 .contact-form input, .contact-form select, .contact-form textarea {
     padding: 15px;
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s;
@@ -1164,8 +1164,8 @@ body {
 
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
     outline: none;
-    border-color: #FF6600;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+    border-color: #ff5800;
+    box-shadow: 0 0 10px rgba(255, 88, 0, 0.2);
 }
 
 .branches {
@@ -1191,7 +1191,7 @@ body {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-left: 4px solid #FF6600;
+    border-left: 4px solid #ff5800;
     transition: all 0.3s;
 }
 
@@ -1201,7 +1201,7 @@ body {
 }
 
 .branch-card h4 {
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -1212,7 +1212,7 @@ body {
 }
 
 .branch-card i {
-    color: #FFD700;
+    color: #ff5800;
     margin-right: 0.5rem;
 }
 
@@ -1238,7 +1238,7 @@ body {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-left: 4px solid #FFD700;
+    border-left: 4px solid #ff5800;
     transition: all 0.3s;
 }
 
@@ -1248,7 +1248,7 @@ body {
 }
 
 .faq-item h4 {
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -1284,18 +1284,18 @@ body {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: all 0.3s;
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
 }
 
 .category-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    border-color: #FF6600;
+    border-color: #ff5800;
 }
 
 .category-card i {
     font-size: 3rem;
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 1rem;
 }
 
@@ -1331,7 +1331,7 @@ body {
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     transition: all 0.3s;
-    border: 1px solid #FFD700;
+    border: 1px solid #ff5800;
 }
 
 .tour-card:hover {
@@ -1340,10 +1340,10 @@ body {
 }
 
 .tour-image {
-    background: linear-gradient(135deg, #FFD700, #FFA500);
+    background: linear-gradient(135deg, #ff5800, #cc4a00);
     padding: 3rem;
     text-align: center;
-    color: #000;
+    color: white;
     position: relative;
 }
 
@@ -1351,7 +1351,7 @@ body {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #FF6600;
+    background: #ff5800;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -1370,7 +1370,7 @@ body {
 }
 
 .tour-duration {
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -1392,14 +1392,14 @@ body {
 }
 
 .tour-includes i {
-    color: #FF6600;
+    color: #ff5800;
     margin-right: 0.5rem;
 }
 
 .tour-price {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #FFD700;
+    color: #ff5800;
     margin-bottom: 1rem;
 }
 
@@ -1409,7 +1409,7 @@ body {
 }
 
 .custom-tour {
-    background: linear-gradient(135deg, #FF6600, #E55A00);
+    background: linear-gradient(135deg, #ff5800, #cc4a00);
     color: white;
     padding: 80px 0;
     text-align: center;
@@ -1471,7 +1471,7 @@ body {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: all 0.3s;
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
 }
 
 .option-card:hover {
@@ -1481,7 +1481,7 @@ body {
 
 .option-card i {
     font-size: 3rem;
-    color: #FFD700;
+    color: #ff5800;
     margin-bottom: 1rem;
 }
 
@@ -1496,7 +1496,7 @@ body {
 }
 
 .option-card .price {
-    background: #FF6600;
+    background: #ff5800;
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
@@ -1529,7 +1529,7 @@ body {
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     transition: all 0.3s;
-    border: 1px solid #FFD700;
+    border: 1px solid #ff5800;
 }
 
 .car-card:hover {
@@ -1538,7 +1538,7 @@ body {
 }
 
 .car-image {
-    background: linear-gradient(135deg, #FF6600, #E55A00);
+    background: linear-gradient(135deg, #ff5800, #cc4a00);
     padding: 2rem;
     text-align: center;
     color: white;
@@ -1555,7 +1555,7 @@ body {
 }
 
 .car-models {
-    color: #FF6600;
+    color: #ff5800;
     font-style: italic;
     margin-bottom: 1rem;
     font-weight: 500;
@@ -1574,7 +1574,7 @@ body {
 }
 
 .car-features i {
-    color: #FFD700;
+    color: #ff5800;
     margin-right: 0.5rem;
     width: 20px;
 }
@@ -1582,7 +1582,7 @@ body {
 .car-price {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 1rem;
 }
 
@@ -1598,7 +1598,7 @@ body {
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
 }
 
 .booking-section h2 {
@@ -1627,7 +1627,7 @@ body {
 
 /* Wedding Page Styles */
 .wedding-header {
-    background: linear-gradient(135deg, #FF6600 0%, #E55A00 100%);
+    background: linear-gradient(135deg, #ff5800 0%, #cc4a00 100%);
     color: white;
 }
 
@@ -1664,7 +1664,7 @@ body {
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
     transition: all 0.3s;
 }
 
@@ -1675,7 +1675,7 @@ body {
 
 .wedding-service i {
     font-size: 3rem;
-    color: #FF6600;
+    color: #ff5800;
     margin-bottom: 1rem;
 }
 
@@ -1713,7 +1713,7 @@ body {
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     transition: all 0.3s;
-    border: 1px solid #FFD700;
+    border: 1px solid #ff5800;
 }
 
 .wedding-car-card:hover {
@@ -1722,8 +1722,8 @@ body {
 }
 
 .wedding-car-card .car-image {
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-    color: #000;
+    background: linear-gradient(135deg, #ff5800, #cc4a00);
+    color: white;
     position: relative;
 }
 
@@ -1731,7 +1731,7 @@ body {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #FF6600;
+    background: #ff5800;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -1773,17 +1773,17 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     transition: all 0.3s;
     position: relative;
-    border: 1px solid #FFD700;
+    border: 1px solid #ff5800;
 }
 
 .package-card.popular {
-    border: 3px solid #FF6600;
+    border: 3px solid #ff5800;
     transform: scale(1.05);
 }
 
 .package-header {
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-    color: #000;
+    background: linear-gradient(135deg, #ff5800, #cc4a00);
+    color: white;
     padding: 2rem;
     text-align: center;
     position: relative;
@@ -1794,7 +1794,7 @@ body {
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
-    background: #FF6600;
+    background: #ff5800;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -1826,7 +1826,7 @@ body {
 }
 
 .package-features i {
-    color: #FF6600;
+    color: #ff5800;
     margin-right: 0.5rem;
 }
 
@@ -1842,7 +1842,7 @@ body {
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    border: 2px solid #FFD700;
+    border: 2px solid #ff5800;
 }
 
 .booking-form-section h2 {
@@ -1905,7 +1905,7 @@ body {
 .scroll-top-btn {
     width: 60px;
     height: 60px;
-    background: #FF6600;
+    background: #ff5800;
     color: white;
     border: none;
     border-radius: 50%;
@@ -1914,7 +1914,7 @@ body {
     justify-content: center;
     font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 88, 0, 0.4);
     transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
@@ -1926,9 +1926,9 @@ body {
 }
 
 .scroll-top-btn:hover {
-    background: #E55A00;
+    background: #cc4a00;
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6);
+    box-shadow: 0 6px 20px rgba(255, 88, 0, 0.6);
 }
 
 @keyframes pulse {
@@ -1958,7 +1958,7 @@ body {
         padding: 0.5rem 0;
         z-index: 1000;
         border-radius: 0 0 10px 0;
-        border-right: 2px solid #FFD700;
+        border-right: 2px solid #ff5800;
     }
 
     .nav-menu .nav-link {
