@@ -2,10 +2,12 @@
 const mobileMenu = document.getElementById('mobile-menu');
 const navMenu = document.getElementById('nav-menu');
 
-mobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (mobileMenu && navMenu) {
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -28,12 +30,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const stickyNav = document.getElementById('sticky-nav');
     const carouselSection = document.querySelector('.carousel-section');
-    const carouselHeight = carouselSection.offsetHeight;
     
-    if (window.scrollY > carouselHeight - 100) {
-        stickyNav.classList.add('show');
-    } else {
-        stickyNav.classList.remove('show');
+    if (stickyNav && carouselSection) {
+        const carouselHeight = carouselSection.offsetHeight;
+        
+        if (window.scrollY > carouselHeight - 100) {
+            stickyNav.classList.add('show');
+        } else {
+            stickyNav.classList.remove('show');
+        }
     }
 });
 
@@ -49,23 +54,26 @@ if (mobileMenuSticky && navMenuSticky) {
 }
 
 // Form Submission Handler
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const name = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const message = this.querySelector('textarea').value;
-    
-    // Simple validation
-    if (name && email && message) {
-        alert('Thank you for your message! We will get back to you soon.');
-        this.reset();
-    } else {
-        alert('Please fill in all fields.');
-    }
-});
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const name = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const message = this.querySelector('textarea').value;
+        
+        // Simple validation
+        if (name && email && message) {
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        } else {
+            alert('Please fill in all fields.');
+        }
+    });
+}
 
 // Carousel Functionality
 let currentSlide = 0;
@@ -103,20 +111,30 @@ document.querySelectorAll('.trip-btn').forEach(btn => {
 });
 
 // Booking Form Handler
-document.querySelector('.booking-form .btn-primary').addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const from = document.querySelector('.booking-form input[placeholder="Pickup Location"]').value;
-    const to = document.querySelector('.booking-form input[placeholder="Drop Location"]').value;
-    const datetime = document.querySelector('.booking-form input[type="datetime-local"]').value;
-    const carType = document.querySelector('.booking-form select').value;
-    
-    if (from && to && datetime && carType !== 'Select Car Type') {
-        alert(`Fare Quote Request!\nFrom: ${from}\nTo: ${to}\nDate & Time: ${new Date(datetime).toLocaleString()}\nCar Type: ${carType}\n\nEstimated fare will be sent via SMS/WhatsApp`);
-    } else {
-        alert('Please fill in all booking details.');
-    }
-});
+const bookingBtn = document.querySelector('.booking-form .btn-primary');
+if (bookingBtn) {
+    bookingBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const pickupInput = document.querySelector('.booking-form input[placeholder="Pickup Location"]');
+        const dropInput = document.querySelector('.booking-form input[placeholder="Drop Location"]');
+        const datetimeInput = document.querySelector('.booking-form input[type="datetime-local"]');
+        const carTypeSelect = document.querySelector('.booking-form select');
+        
+        if (pickupInput && dropInput && datetimeInput && carTypeSelect) {
+            const from = pickupInput.value;
+            const to = dropInput.value;
+            const datetime = datetimeInput.value;
+            const carType = carTypeSelect.value;
+            
+            if (from && to && datetime && carType !== 'Select Car Type') {
+                alert(`Fare Quote Request!\nFrom: ${from}\nTo: ${to}\nDate & Time: ${new Date(datetime).toLocaleString()}\nCar Type: ${carType}\n\nEstimated fare will be sent via SMS/WhatsApp`);
+            } else {
+                alert('Please fill in all booking details.');
+            }
+        }
+    });
+}
 
 // Scroll Animation for Service Cards
 const observerOptions = {

@@ -11,21 +11,21 @@
     <meta name="language" content="English">
     <meta name="geo.region" content="IN">
     <meta name="geo.placename" content="India">
-    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+    <meta name="google-site-verification" content="23ajximOhjcSaplr5OFe6VXTGeWWE8bWWp-hZwpNMpI" />
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Taxiverz - Best Taxi Service in India | Book Cab Online 24/7">
     <meta property="og:description" content="Book India's best taxi service with Taxiverz. 24/7 cab booking, airport transfers, outstation trips. Safe, reliable & affordable rides in 500+ cities.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com">
-    <meta property="og:image" content="https://yourwebsite.com/images/taxiverz.avif">
+    <meta property="og:image" content="https://yourwebsite.com/taxiverz.avif">
     <meta property="og:site_name" content="Taxiverz">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Taxiverz - Best Taxi Service in India">
     <meta name="twitter:description" content="Book India's best taxi service with Taxiverz. 24/7 cab booking, safe & reliable rides.">
-    <meta name="twitter:image" content="https://yourwebsite.com/images/taxiverz.avif">
+    <meta name="twitter:image" content="https://yourwebsite.com/taxiverz.avif">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://yourwebsite.com">
@@ -93,7 +93,423 @@
     </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="alignment-fix.css">
+    <link rel="stylesheet" href="alignment-fix.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .view-all-container {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .btn-view-all {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff5800, #e04900);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 88, 0, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-view-all:hover {
+            background: linear-gradient(135deg, #e04900, #cc4100);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 88, 0, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .btn-view-all i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-view-all:hover i {
+            transform: translateX(3px);
+        }
+        
+        .tour-price-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .tour-price-action .tour-price {
+            margin: 0;
+        }
+        
+        .tour-price-action .btn-primary {
+            margin: 0;
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+        
+        .car-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: linear-gradient(135deg, #fff3e0, #fffde7);
+            border-radius: 8px;
+            border-left: 4px solid #ff5800;
+        }
+        
+        .spec-item {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .spec-item i {
+            margin-right: 6px;
+            color: #ff5800;
+            width: 14px;
+        }
+        
+        .option-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+            padding: 1.5rem;
+        }
+        
+        .option-card .btn-primary {
+            margin-top: auto;
+            margin-top: 1rem;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .option-card .btn-primary:hover {
+            background: linear-gradient(135deg, #ff5800, #e04900);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 88, 0, 0.3);
+        }
+        
+        .tour-badge {
+            background: linear-gradient(135deg, #ffcc00, #ffd700);
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .car-price {
+            color: #ff5800;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .tour-price {
+            color: #ff5800;
+            font-weight: bold;
+        }
+        
+        .tour-fallback-icon {
+            color: rgba(255,255,255,0.9);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* Navigation Links Bold */
+        .nav-link {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .carousel-nav-bar .nav-link {
+            font-weight: 700;
+            font-size: 16px;
+            color: white !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .carousel-nav-bar .nav-link:hover {
+            color: #ff5800 !important;
+        }
+        
+        .carousel-nav-bar {
+            background: rgba(0, 0, 0, 0.3) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        .carousel-nav-bar .nav-logo img {
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));
+        }
+        
+        .sticky-nav .nav-link {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        /* Ensure all contact icons are blue */
+        #contact .contact-item i,
+        .contact .contact-item i,
+        .contact-main .contact-item i {
+            color: white !important;
+            background: #007bff !important;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        
+        /* Head Office and Branch Office icons blue */
+        .office-locations .office-item i,
+        .contact-info .office-item i,
+        #contact .office-item i {
+            color: white !important;
+            background: #007bff !important;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        
+        /* Section Headers */
+        .section-header h2 {
+            color: #ff5800;
+            position: relative;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #ff5800, #ffcc00);
+            border-radius: 2px;
+        }
+        
+        /* Hero Section */
+        .hero-features .feature-item i {
+            color: #ff5800;
+        }
+        
+        .hero-features .feature-item {
+            background: linear-gradient(135deg, #fff3e0, #fffde7);
+            padding: 10px 15px;
+            border-radius: 20px;
+            border: 2px solid #ffcc00;
+        }
+        
+        /* Why Choose Us Section */
+        .feature-icon i {
+            color: #ff5800;
+            background: linear-gradient(135deg, #ffcc00, #ffd700);
+            padding: 20px;
+            border-radius: 50%;
+            color: #333;
+        }
+        
+        .feature-card {
+            border-top: 4px solid #ff5800;
+            background: linear-gradient(135deg, #ffffff, #fff8f0);
+        }
+        
+        /* Testimonials Section */
+        .stars i {
+            color: #ffcc00;
+        }
+        
+        .testimonial-card {
+            border-left: 4px solid #007bff;
+            background: linear-gradient(135deg, #f8f9ff, #fff8f0);
+        }
+        
+        /* About Section */
+        .about-stats .stat-item h3 {
+            color: #ff5800;
+        }
+        
+        .about-image .image-placeholder i {
+            color: #ffcc00;
+        }
+        
+        /* Contact Section */
+        .contact-item i {
+            color: white;
+            background: #007bff;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        
+        .office-item i {
+            color: #007bff;
+        }
+        
+        /* All Primary Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #ff5800, #e04900);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 88, 0, 0.3);
+        }
+        
+        /* Tour Cards */
+        .tour-duration i {
+            color: #ff5800;
+        }
+        
+        .tour-card {
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, #ff5800, #ffcc00) border-box;
+        }
+        
+        /* Rental Options */
+        .option-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .option-card i {
+            color: #ff5800;
+            background: none;
+            padding: 0;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .option-card h3 {
+            color: #333;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem 0;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .price {
+            color: #ff5800;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .tour-destination-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        
+        .tour-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Dropdown Menu Styles */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .nav-dropdown .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ff5800;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #e04900;
+        }
+        
+        .dropdown-content .view-all {
+            background-color: #ff5800;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .dropdown-content .view-all:hover {
+            background-color: #e04900;
+        }
+        
+        .dropdown-content hr {
+            margin: 0;
+            border: none;
+            border-top: 1px solid #e04900;
+        }
+        
+        .nav-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .nav-dropdown:hover .nav-link i {
+            transform: rotate(180deg);
+            transition: transform 0.3s;
+        }
+        
+        /* Fleet Grid - 5 cards per row */
+        .fleet-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .fleet-grid .car-card {
+            flex: 1 1 calc(20% - 1rem);
+            min-width: 200px;
+        }
+        
+        @media (max-width: 768px) {
+            .fleet-grid .car-card {
+                flex: 1 1 calc(50% - 1rem);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .fleet-grid .car-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -102,13 +518,42 @@
     <nav class="navbar sticky-nav" id="sticky-nav">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="./images/taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
+                <img src="./taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
             </div>
             <div class="nav-menu" id="nav-menu-sticky">
                 <a href="index.html" class="nav-link active">Home</a>
-                <a href="tours.html" class="nav-link">Tours</a>
-                <a href="car-rental.html" class="nav-link">Car Rental</a>
-                <a href="wedding.html" class="nav-link">Wedding Cars</a>
+                <div class="nav-dropdown">
+                    <a href="tours.html" class="nav-link active">Taxi Service<i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="local-taxi-booking-gorakhpur.html">Local Taxi Booking In Gorakhpur</a>
+                        <a href="outstation-cab-rental-gorakhpur.html">Outstation Cab Rental in Gorakhpur</a>
+                        <a href="airport-taxi-service-gorakhpur.html">Airport Taxi Service in Gorakhpur</a>
+                        <a href="taxi-rental-near-me-gorakhpur.html">Taxi Rental Near Me in Gorakhpur</a>
+                        <a href="cab-booking-online-gorakhpur.html">Cab Booking Online in Gorakhpur</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="car-rental.html" class="nav-link active">Car Rental <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="car-rental-service-in-gorakhpur.html">Car Rental Services in Gorakhpur</a>
+                        <a href="self-drive-car-rental-in-gorakhpur.html">Self-Drive Car Rental in Gorakhpur</a>
+                        <a href="luxury-car-rental-in-gorakhpur.html">Luxury Car Rental in Gorakhpur</a>
+                        <a href="car-rental.html">SUV Car Rental in Gorakhpur</a>
+                        <a href="car-rental.html">Car Hire with Driver in Gorakhpur</a>
+
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="wedding.html" class="nav-link active">Wedding Cars Rental <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="wedding.html">Luxury Wedding Car Rental in Gorakhpur</a>
+                        <a href="wedding.html">Vintage Car Rental for Weddings in Gorakhpur</a>
+                        <a href="wedding.html">Wedding Car Hire with Chauffeur in Gorakhpur</a>
+                        <a href="wedding.html">Luxury Car Rental for Events in Gorakhpur</a>
+                        <a href="wedding.html">Wedding Transportation Services in Gorakhpur</a>
+                    </div>
+                </div>
+                <a href="video-shooting.html" class="nav-link">Video Shooting</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
@@ -124,17 +569,46 @@
     <section class="carousel-section">
         <div class="carousel-container">
             <div class="carousel-slide active">
-                <img src="./caro1.jpg" alt="Taxiverz Service" class="carousel-image">
+                <img src="carrental.jpg" alt="Taxiverz Service" class="carousel-image"> 
                 <nav class="navbar carousel-nav-bar">
                     <div class="nav-container">
                         <div class="nav-logo">
-                            <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
+                            <img src="taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
                         </div>
                         <div class="nav-menu" id="nav-menu">
                             <a href="index.html" class="nav-link active">Home</a>
-                            <a href="tours.html" class="nav-link">Tours</a>
-                            <a href="car-rental.html" class="nav-link">Car Rental</a>
-                            <a href="wedding.html" class="nav-link">Wedding Cars</a>
+                             <div class="nav-dropdown">
+                    <a href="tours.html" class="nav-link active">Taxi Service<i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="local-taxi-booking-gorakhpur.html">Local Taxi Booking In Gorakhpur</a>
+                        <a href="outstation-cab-rental-gorakhpur.html">Outstation Cab Rental in Gorakhpur</a>
+                        <a href="airport-taxi-service-gorakhpur.html">Airport Taxi Service in Gorakhpur</a>
+                        <a href="taxi-rental-near-me-gorakhpur.html">Taxi Rental Near Me in Gorakhpur</a>
+                        <a href="international-taxi.html">International Cab Rental in Gorakhpur</a>
+                        <a href="cab-booking-online-gorakhpur.html">Cab Booking Online in Gorakhpur</a>
+                    </div>
+                </div>
+                           <div class="nav-dropdown">
+                    <a href="car-rental.html" class="nav-link active">Car Rental <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="car-rental-service-in-gorakhpur.html">Car Rental Services in Gorakhpur</a>
+                        <a href="self-drive-car-rental-in-gorakhpur.html">Self-Drive Car Rental in Gorakhpur</a>
+                        <a href="luxury-car-rental-in-gorakhpur.html">Luxury Car Rental in Gorakhpur</a>
+                        <a href="car-rental.html">SUV Car Rental in Gorakhpur</a>
+                        <a href="car-rental.html">Car Hire with Driver in Gorakhpur</a>
+
+                    </div>
+                </div>
+                            <div class="nav-dropdown">
+                    <a href="wedding.html" class="nav-link active">Wedding Cars Rental <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="wedding.html">Luxury Wedding Car Rental in Gorakhpur</a>
+                        <a href="wedding.html">Vintage Car Rental for Weddings in Gorakhpur</a>
+                        <a href="wedding.html">Wedding Car Hire with Chauffeur in Gorakhpur</a>
+                        <a href="wedding.html">Luxury Car Rental for Events in Gorakhpur</a>
+                        <a href="wedding.html">Wedding Transportation Services in Gorakhpur</a>
+                    </div>
+                </div>
                             <a href="about.html" class="nav-link">About</a>
                             <a href="contact.html" class="nav-link">Contact</a>
                         </div>
@@ -151,17 +625,45 @@
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="./caro2.jpg" alt="Taxiverz Fleet" class="carousel-image">
+                <img src="./carrental.jpg" alt="Taxiverz Fleet" class="carousel-image">
                 <nav class="navbar carousel-nav-bar">
                     <div class="nav-container">
                         <div class="nav-logo">
-                            <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
+                            <img src="taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
                         </div>
                         <div class="nav-menu" id="nav-menu">
                             <a href="index.html" class="nav-link active">Home</a>
-                            <a href="tours.html" class="nav-link">Tours</a>
-                            <a href="car-rental.html" class="nav-link">Car Rental</a>
-                            <a href="wedding.html" class="nav-link">Wedding Cars</a>
+                             <div class="nav-dropdown">
+                    <a href="tours.html" class="nav-link active">Taxi Service<i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="local-taxi-booking-gorakhpur.html">Local Taxi Booking In Gorakhpur</a>
+                        <a href="outstation-cab-rental-gorakhpur.html">Outstation Cab Rental in Gorakhpur</a>
+                        <a href="airport-taxi-service-gorakhpur.html">Airport Taxi Service in Gorakhpur</a>
+                        <a href="taxi-rental-near-me-gorakhpur.html">Taxi Rental Near Me in Gorakhpur</a>
+                        <a href="cab-booking-online-gorakhpur.html">Cab Booking Online in Gorakhpur</a>
+                    </div>
+                </div>
+                           <div class="nav-dropdown">
+                    <a href="car-rental.html" class="nav-link active">Car Rental <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="car-rental-service-in-gorakhpur.html">Car Rental Services in Gorakhpur</a>
+                        <a href="self-drive-car-rental-in-gorakhpur.html">Self-Drive Car Rental in Gorakhpur</a>
+                        <a href="luxury-car-rental-in-gorakhpur.html">Luxury Car Rental in Gorakhpur</a>
+                        <a href="car-rental.html">SUV Car Rental in Gorakhpur</a>
+                        <a href="car-rental.html">Car Hire with Driver in Gorakhpur</a>
+
+                    </div>
+                </div>
+                            <div class="nav-dropdown">
+                    <a href="wedding.html" class="nav-link active">Wedding Cars Rental <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="wedding.html">Luxury Wedding Car Rental in Gorakhpur</a>
+                        <a href="wedding.html">Vintage Car Rental for Weddings in Gorakhpur</a>
+                        <a href="wedding.html">Wedding Car Hire with Chauffeur in Gorakhpur</a>
+                        <a href="wedding.html">Luxury Car Rental for Events in Gorakhpur</a>
+                        <a href="wedding.html">Wedding Transportation Services in Gorakhpur</a>
+                    </div>
+                </div>
                             <a href="about.html" class="nav-link">About</a>
                             <a href="contact.html" class="nav-link">Contact</a>
                         </div>
@@ -233,151 +735,481 @@
         </div>
     </section>
 
-    <!-- Tour Packages Section -->
-    <section class="tour-packages">
+    <!-- Rental Options 
+    <section class="rental-options">
         <div class="container">
-            <h2>Popular Tour Packages</h2>
-            <div class="packages-grid">
-                <div class="package-card">
-                    <div class="package-image">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <h4>Delhi to Manali</h4>
-                    <p>3 Days / 2 Nights</p>
-                    <div class="package-price">₹8,500</div>
+            <div class="section-header">
+                <h2>Car Rental Options</h2>
+                <p>Choose the perfect rental plan for your needs</p>
+            </div>
+            <div class="options-grid">
+                <div class="option-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Hourly Rental</h3>
+                    <p>Perfect for short trips and city tours</p>
+                    <button class="btn-primary">Book Now</button>
                 </div>
-                <div class="package-card">
-                    <div class="package-image">
-                        <i class="fas fa-water"></i>
-                    </div>
-                    <h4>Mumbai to Goa</h4>
-                    <p>2 Days / 1 Night</p>
-                    <div class="package-price">₹6,200</div>
+                <div class="option-card">
+                    <i class="fas fa-calendar-day"></i>
+                    <h3>Daily Rental</h3>
+                    <p>Ideal for full day outings and business</p>
+                    <button class="btn-primary">Book Now</button>
                 </div>
-                <div class="package-card">
-                    <div class="package-image">
-                        <i class="fas fa-temple-hindu"></i>
-                    </div>
-                    <h4>Golden Triangle</h4>
-                    <p>5 Days / 4 Nights</p>
-                    <div class="package-price">₹12,000</div>
+                <div class="option-card">
+                    <i class="fas fa-calendar-week"></i>
+                    <h3>Weekly Rental</h3>
+                    <p>Best for extended stays and projects</p>
+                    <button class="btn-primary">Book Now</button>
                 </div>
-                <div class="package-card">
-                    <div class="package-image">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <h4>Kerala Backwaters</h4>
-                    <p>4 Days / 3 Nights</p>
-                    <div class="package-price">₹9,800</div>
+                <div class="option-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Monthly Rental</h3>
+                    <p>Corporate packages and long-term needs</p>
+                    <button class="btn-primary">Book Now</button>
                 </div>
-                <div class="package-card">
-                    <div class="package-image">
-                        <i class="fas fa-mountain-sun"></i>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Car Fleet - Organized by Price -->
+    <section class="car-fleet">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Car Fleet - Best Prices</h2>
+                <p>Choose from our wide range of vehicles - Organized from most affordable to premium</p>
+            </div>
+            <div class="fleet-grid">
+                <!-- Cheapest Car -->
+                <div class="car-card">
+                    <img src="car10.jpeg" alt="Swift Dzire Economy Sedan" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Swift Dzire</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 4</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 4</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹1200/Day</div>
+                        </div>
+                        <div class="car-price">₹8/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Swift Dzire', '₹8/km')">Book Now</button>
                     </div>
-                    <h4>Shimla Kullu</h4>
-                    <p>3 Days / 2 Nights</p>
-                    <div class="package-price">₹7,500</div>
                 </div>
-                <div class="package-card">
-                    <div class="package-image">
-                        <i class="fas fa-umbrella-beach"></i>
+
+                <div class="car-card">
+                    <img src="car5.jpeg" alt="Innova SUV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>MTV-Ertiga</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 7</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2200/Day</div>
+                        </div>
+                        <div class="car-price">₹15/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Innova', '₹15/km')">Book Now</button>
                     </div>
-                    <h4>Andaman Islands</h4>
-                    <p>6 Days / 5 Nights</p>
-                    <div class="package-price">₹15,000</div>
                 </div>
-                <div class="package-card">
-                    <div class="package-image">
-                        <i class="fas fa-mosque"></i>
+
+                <div class="car-card">
+                    <img src="car7.jpeg" alt="Ertiga SUV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Toyota Innova</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 7</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2700/Day</div>
+                        </div>
+                        <div class="car-price">₹18/km</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
                     </div>
-                    <h4>Rajasthan Royal</h4>
-                    <p>7 Days / 6 Nights</p>
-                    <div class="package-price">₹18,500</div>
                 </div>
-                <div class="package-card">
-                    <div class="package-image">
-                        <i class="fas fa-snowflake"></i>
+                 <div class="car-card">
+                    <img src="car9.jpeg" alt="Ertiga SUV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Fortuner</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 7</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2700/Day</div>
+                        </div>
+                        <div class="car-price">₹18/km</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
                     </div>
-                    <h4>Kashmir Valley</h4>
-                    <p>5 Days / 4 Nights</p>
-                    <div class="package-price">₹13,200</div>
                 </div>
+                 <div class="car-card">
+                    <img src="car4.jpeg" alt="Ertiga SUV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Range rover</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 7</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2700/Day</div>
+                        </div>
+                        <div class="car-price">₹18/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Ertiga', '₹18/km')">Book Now</button>
+                    </div>
+                </div>
+
+               
+            </div>
+            <div class="view-all-container">
+                <a href="car-rental.html" class="btn-view-all">View All Cars <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Self Drive Cars Section -->
+    <section class="self-drive-cars">
         <div class="container">
             <div class="section-header">
-                <h2>Our Premium Services</h2>
-                <p>Choose from our wide range of transportation solutions</p>
+                <h2>A WIDE RANGE OF CARS FOR SELF DRIVE</h2>
+                <p>Drive yourself with our premium self-drive car rental service</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Local Taxi</h3>
-                        <p>Quick and comfortable rides within city limits with professional drivers</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> AC Vehicles</li>
-                            <li><i class="fas fa-check"></i> GPS Tracking</li>
-                            <li><i class="fas fa-check"></i> 24/7 Available</li>
-                        </ul>
-                        <div class="service-price">Starting ₹8/km</div>
-                        <button class="service-btn">Book Now</button>
+            <div class="self-drive-grid">
+                <div class="self-drive-card">
+                    <img src="car12.jpeg" alt="BMW" class="car-image-real">
+                    <div class="car-details">
+                        <h3>BMW</h3>
+                        <p>Ultimate driving machine for luxury experience</p>
+                        <div class="price">₹5,000/day</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-route"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Outstation</h3>
-                        <p>Comfortable long-distance travel to any destination across India</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Experienced Drivers</li>
-                            <li><i class="fas fa-check"></i> Well Maintained Cars</li>
-                            <li><i class="fas fa-check"></i> Flexible Packages</li>
-                        </ul>
-                        <div class="service-price">Starting ₹12/km</div>
-                        <button class="service-btn">Book Now</button>
+                <div class="self-drive-card">
+                    <img src="car2.jpeg" alt="Mercedes" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Mercedes</h3>
+                        <p>Premium comfort and sophisticated design</p>
+                        <div class="price">₹4,500/day</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Airport Transfer</h3>
-                        <p>Reliable pickup and drop services to all major airports</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Flight Tracking</li>
-                            <li><i class="fas fa-check"></i> Meet & Greet</li>
-                            <li><i class="fas fa-check"></i> Fixed Rates</li>
-                        </ul>
-                        <div class="service-price">Fixed Rates</div>
-                        <button class="service-btn">Book Now</button>
+                <div class="self-drive-card">
+                    <img src="car6.jpeg" alt="Audi" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Audi</h3>
+                        <p>Advanced technology meets elegant performance</p>
+                        <div class="price">₹4,200/day</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Car Rental</h3>
-                        <p>Hourly and daily car rental with experienced drivers</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Multiple Car Options</li>
-                            <li><i class="fas fa-check"></i> Hourly/Daily Rates</li>
-                            <li><i class="fas fa-check"></i> Corporate Packages</li>
-                        </ul>
-                        <div class="service-price">₹150/hour</div>
-                        <button class="service-btn">Book Now</button>
+                <div class="self-drive-card">
+                    <img src="car3.jpeg" alt="Jaguar" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Jaguar</h3>
+                        <p>British luxury with powerful performance</p>
+                        <div class="price">₹4,800/day</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
                     </div>
                 </div>
+                <div class="self-drive-card">
+                    <img src="defender.jpg" alt="Defender" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Land Rover Defender</h3>
+                        <p>Rugged luxury SUV for all terrains and performance</p>
+                        <div class="price">₹6,000/day</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="car-rental.html" class="btn-view-all">Explore Self Drive Cars <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxurious Tempo and AC Bus Section -->
+    <section class="tempo-bus-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>LUXURIOUS TEMPO AND AC BUS</h2>
+                <p>Comfortable group travel solutions for large families and corporate events</p>
+            </div>
+            <div class="tempo-bus-grid">
+                <div class="tempo-bus-card">
+                    <img src="Volvo AC bus.jpeg" alt="Volvo AC Bus" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Volvo AC Bus</h3>
+                        <p>Premium luxury bus for long distance travel</p>
+                        <div class="vehicle-specs">
+                            <div class="spec-item"><i class="fas fa-users"></i> 45-50 Seater</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Premium AC</div>
+                        </div>
+                        <div class="price">₹35/km</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
+                    </div>
+                </div>
+                <div class="tempo-bus-card">
+                    <img src="Tata Winger.jpeg" alt="Tata Winger" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Tata Winger</h3>
+                        <p>Perfect for group outings and family trips</p>
+                        <div class="vehicle-specs">
+                            <div class="spec-item"><i class="fas fa-users"></i> 12-15 Seater</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> AC Available</div>
+                        </div>
+                        <div class="price">₹20/km</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
+                    </div>
+                </div>
+                <div class="tempo-bus-card">
+                    <img src="Volvo.jpeg" alt="Volvo Bus" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Volvo Bus</h3>
+                        <p>Comfortable travel for medium groups</p>
+                        <div class="vehicle-specs">
+                            <div class="spec-item"><i class="fas fa-users"></i> 30-35 Seater</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Full AC</div>
+                        </div>
+                        <div class="price">₹28/km</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
+                    </div>
+                </div>
+                <div class="tempo-bus-card">
+                    <img src="Force Urbania.jpeg" alt="Force Urbania" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Force Urbania</h3>
+                        <p>Modern luxury van for corporate events</p>
+                        <div class="vehicle-specs">
+                            <div class="spec-item"><i class="fas fa-users"></i> 10-13 Seater</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Luxury AC</div>
+                        </div>
+                        <div class="price">₹25/km</div>
+                        <button class="btn-primary" onclick="window.location.href='car-rental.html'">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="car-rental.html" class="btn-view-all">Explore All Vehicles <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Routes Section -->
+    <section id="services" class="services" style="background: linear-gradient(135deg, #0060c8, #004a9f); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Local Taxi Routes</h2>
+                <p>Explore our most frequently booked destinations</p>
+            </div>
+            <div class="tours-grid">
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-nepal.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Nepal Destination" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-mountain fa-3x tour-fallback-icon"></i>
+                        <div class="tour-badge">Best Seller</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Nepal Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Comfortable and safe taxi service from Gorakhpur to Nepal with experienced drivers.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹4,500 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-ayodhya.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Ayodhya Temple" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-temple-hindu fa-3x tour-fallback-icon"></i>
+                        <div class="tour-badge">Popular</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Ayodhya Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Visit the holy city of Ayodhya from Gorakhpur with our reliable taxi service.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹2,800 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-banaras.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Varanasi Ghats" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-city fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Banaras Taxi</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Travel to the spiritual capital Varanasi from Gorakhpur with premium service.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹3,200 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-dehradun.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Dehradun Hills" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-mountain fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Dehradun Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Journey to the gateway of Garhwal Himalayas to enjoy everything from Gorakhpur .</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹6,800 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-lucknow.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Lucknow Monument" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-city fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Lucknow Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Travel to the city of Nawabs, Lucknow from Gorakhpur with premium service.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹4,200 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-kushinagar.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Kushinagar Temple" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-temple-buddhist fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Kushinagar Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Visit the place where Lord Buddha attained Mahaparinirvana from Gorakhpur.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹1,800 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='ayodhya-to-prayagraj.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Prayagraj Sangam" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-water fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Ayodhya To Prayagraj Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Travel from Ayodhya to Prayagraj for the holy confluence of rivers from gorakhpur.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹2,500 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-janakpur.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Janakpur Temple" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-temple-hindu fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Janakpur Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Visit the birthplace of Goddess Sita in Janakpur, Nepal Tour from Gorakhpur.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹5,200 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Lucknow City" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-city fa-3x tour-fallback-icon"></i>
+                        <div class="tour-badge">Popular</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Lucknow To Gorakhpur Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Comfortable journey from Lucknow to Gorakhpur with professional drivers.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹4,000 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Banaras Ghats" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-temple-hindu fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Banaras To Gorakhpur Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Spiritual journey from Banaras to Gorakhpur with comfortable travel.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹4,000 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Delhi Capital" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-building fa-3x tour-fallback-icon"></i>
+                        <div class="tour-badge">Long Distance</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Delhi Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Long distance travel from Gorakhpur to Delhi with premium service.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹14,500 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="taxiverz.avif" alt="Delhi to Gorakhpur" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-building fa-3x tour-fallback-icon"></i>
+                        <div class="tour-badge">Long Distance</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Delhi To Gorakhpur Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Premium travel from Delhi to Gorakhpur with experienced drivers.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹14,500 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            <!-- Additional Routes in same section -->
+            <div class="route-links" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 2rem;">
+                <a href="gorakhpur-to-agra.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Agra</a>
+                <a href="gorakhpur-to-chitwan.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Chitwan</a>
+                <a href="gorakhpur-to-lumbini.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Lumbini</a>
+                <a href="gorakhpur-to-pokhara.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Pokhara</a>
+                <a href="gorakhpur-to-patna.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Patna</a>
+            </div>
+            <div class="route-links" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1rem;">
+                <a href="gorakhpur-to-bodhgaya.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Bodhgaya</a>
+                <a href="gorakhpur-to-deoria.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Deoria</a>
+                <a href="gorakhpur-to-basti.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Basti</a>
+                <a href="gorakhpur-to-azamgarh.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Azamgarh</a>
+                <a href="gorakhpur-to-mau.html" style="background: #0060c8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #0060c8;">Gorakhpur To Mau</a>
             </div>
         </div>
     </section>
@@ -493,11 +1325,11 @@
                     <p>With over 5 years of experience in the transportation industry, Taxiverz has become a trusted name for reliable and comfortable travel solutions across India. We pride ourselves on providing exceptional service with a fleet of well-maintained vehicles and professional drivers.</p>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <h3>10K+</h3>
+                            <h3><span class="counter" data-target="10000">0</span>+</h3>
                             <p>Happy Customers</p>
                         </div>
                         <div class="stat-item">
-                            <h3>500+</h3>
+                            <h3><span class="counter" data-target="500">0</span>+</h3>
                             <p>Cities Covered</p>
                         </div>
                         <div class="stat-item">
@@ -508,7 +1340,7 @@
                 </div>
                 <div class="about-image">
                     <div class="image-placeholder">
-                        <i class="fas fa-car fa-5x"></i>
+                        <img src="taxiverz.avif" alt="Taxiverz Logo" style="max-width: 200px; height: auto;">
                     </div>
                 </div>
             </div>
@@ -584,7 +1416,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="./images/taxiverz.avif" alt="Taxiverz Logo" class="footer-logo-img">
+                        <img src="./taxiverz.avif" alt="Taxiverz Logo" class="footer-logo-img">
                     </div>
                     <p>Your trusted travel partner</p>
                 </div>
@@ -598,9 +1430,9 @@
                 <div class="footer-section">
                     <h4>Follow Us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/share/1Bpqo1dubB/" target="_blank"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/travel_nepal_club?igsh=cGI0czA0Y2s0MzJm" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -615,6 +1447,39 @@
         <a href="https://wa.me/918576000074" class="whatsapp-btn" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book Your Ride</h2>
+            <form class="booking-form-modal">
+                <div class="selected-car">
+                    <h3 id="selectedCar">Selected Car</h3>
+                    <p id="selectedPrice">Price</p>
+                </div>
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" placeholder="Pickup Location" required>
+                    <input type="text" placeholder="Drop Location" required>
+                </div>
+                <div class="form-row">
+                    <input type="datetime-local" required>
+                    <select required>
+                        <option value="">Trip Type</option>
+                        <option value="oneway">One Way</option>
+                        <option value="roundtrip">Round Trip</option>
+                        <option value="hourly">Hourly</option>
+                    </select>
+                </div>
+                <textarea placeholder="Special Requirements" rows="3"></textarea>
+                <button type="submit" class="btn-primary">Confirm Booking</button>
+            </form>
+        </div>
     </div>
 
     <!-- Chatbot -->
@@ -640,5 +1505,97 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Booking modal functionality
+        const modal = document.getElementById('bookingModal');
+        const closeBtn = document.getElementsByClassName('close')[0];
+
+        function openBookingModal(carName, price) {
+            document.getElementById('selectedCar').textContent = carName;
+            document.getElementById('selectedPrice').textContent = price;
+            modal.style.display = 'block';
+        }
+
+        if (closeBtn) {
+            closeBtn.onclick = function() {
+                modal.style.display = 'none';
+            }
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Counter Animation
+        function startCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target >= 1000 ? (target/1000) + 'K' : target;
+                    clearInterval(timer);
+                } else {
+                    const displayValue = Math.floor(current);
+                    element.textContent = displayValue >= 1000 ? Math.floor(displayValue/1000) + 'K' : displayValue;
+                }
+            }, 20);
+        }
+
+        // Start animation when page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const counters = document.querySelectorAll('.counter');
+                counters.forEach(counter => {
+                    startCounter(counter);
+                });
+            }, 500);
+        });
+
+        // Auto-scroll for fleet grid
+        document.addEventListener('DOMContentLoaded', function() {
+            const fleetGrid = document.querySelector('.fleet-grid');
+            if (fleetGrid) {
+                let scrollAmount = 0;
+                const cardWidth = 315; // 300px card + 15px gap
+                const totalCards = fleetGrid.children.length;
+                const maxScroll = (totalCards - 1) * cardWidth;
+                
+                setInterval(() => {
+                    scrollAmount += cardWidth;
+                    if (scrollAmount > maxScroll) {
+                        scrollAmount = 0;
+                    }
+                    fleetGrid.scrollTo({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                }, 3000); // 3 seconds interval
+            }
+            
+            // Auto-scroll for self-drive grid
+            const selfDriveGrid = document.querySelector('.self-drive-grid');
+            if (selfDriveGrid) {
+                let scrollAmount2 = 0;
+                const cardWidth2 = 315; // 300px card + 15px gap
+                const totalCards2 = selfDriveGrid.children.length;
+                const maxScroll2 = (totalCards2 - 1) * cardWidth2;
+                
+                setInterval(() => {
+                    scrollAmount2 += cardWidth2;
+                    if (scrollAmount2 > maxScroll2) {
+                        scrollAmount2 = 0;
+                    }
+                    selfDriveGrid.scrollTo({
+                        left: scrollAmount2,
+                        behavior: 'smooth'
+                    });
+                }, 4000); // 4 seconds interval (different from fleet)
+            }
+        });
+    </script>
 </body>
 </html>

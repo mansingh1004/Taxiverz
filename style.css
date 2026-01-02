@@ -1519,18 +1519,19 @@ body {
 }
 
 .fleet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem !important;
 }
 
 .car-card {
     background: white;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     transition: all 0.3s;
     border: 1px solid #ff5800;
+    max-width: 280px;
 }
 
 .car-card:hover {
@@ -1546,12 +1547,12 @@ body {
 }
 
 .car-details {
-    padding: 2rem;
+    padding: 1.2rem;
 }
 
 .car-details h3 {
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -1581,7 +1582,7 @@ body {
 }
 
 .car-price {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #ff5800;
     margin-bottom: 1rem;
@@ -1930,7 +1931,7 @@ body {
         transition: 0.3s;
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         padding: 0.5rem 0;
-        z-index: 1000;
+        z-index: 9999;
         border-radius: 0 0 10px 0;
         border-right: 2px solid #ff5800;
     }
@@ -2051,7 +2052,7 @@ body {
     }
     
     .fleet-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
     
     .wedding-cars-grid {
@@ -2132,6 +2133,46 @@ body {
         width: 50px;
         height: 50px;
         font-size: 1.2rem;
+    }
+}
+
+/* Ultra Small Mobile Devices (320px) */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 0 10px !important;
+    }
+    
+    .hero-description h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .car-fleet h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    .btn-primary {
+        font-size: 14px !important;
+        padding: 10px 16px !important;
+    }
+    
+    .car-card {
+        margin: 0 5px 1rem 5px !important;
+    }
+}
+
+/* Landscape Mobile Orientation */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .page-header {
+        min-height: 200px !important;
+        padding: 60px 0 30px !important;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .carousel-section {
+        height: 250px !important;
     }
 }
 /* Carousel Image Styling */
@@ -3230,189 +3271,588 @@ body {
     }
 }
 
-/* Enhanced Footer Styles */
+/* Footer Styles - Compatible with Hostinger */
 .footer {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-    color: white;
-    padding: 60px 0 20px;
-    position: relative;
-    overflow: hidden;
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    padding: 40px 0 20px !important;
+    margin-top: 50px;
 }
 
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #ff5800, #ff8c42, #ff5800);
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-    gap: 3rem;
-    margin-bottom: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.footer-section h3,
+.footer-section {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
 .footer-section h4 {
-    color: #ff5800;
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    position: relative;
-}
-
-.footer-section h3::after,
-.footer-section h4::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background: #ff5800;
+    color: #ff5800 !important;
+    margin-bottom: 15px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
 }
 
 .footer-logo {
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
 }
 
 .footer-logo-img {
-    max-width: 150px;
-    height: auto;
-    filter: brightness(1.2);
+    max-width: 120px !important;
+    height: auto !important;
+    display: block;
 }
 
 .footer-section p {
-    color: #ccc;
-    line-height: 1.8;
-    margin-bottom: 0.8rem;
-    transition: color 0.3s;
-}
-
-.footer-section p:hover {
-    color: white;
+    color: #cccccc !important;
+    line-height: 1.6 !important;
+    margin-bottom: 8px !important;
+    font-size: 14px !important;
 }
 
 .footer-section p i {
-    color: #ff5800;
-    margin-right: 0.8rem;
-    width: 20px;
-    font-size: 1.1rem;
+    color: #ff5800 !important;
+    margin-right: 8px !important;
+    width: 16px !important;
+    display: inline-block;
 }
 
-.footer-section a {
-    color: #ccc;
-    text-decoration: none;
-    transition: all 0.3s;
+.footer-section ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-.footer-section a:hover {
-    color: #ff5800;
-    text-decoration: underline;
+.footer-section ul li {
+    margin-bottom: 8px !important;
+}
+
+.footer-section ul li a {
+    color: #cccccc !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ff5800 !important;
 }
 
 .social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 10px;
+    margin-top: 15px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .social-links a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 88, 0, 0.1);
-    border: 2px solid rgba(255, 88, 0, 0.3);
-    border-radius: 50%;
-    color: #ff5800;
-    font-size: 1.2rem;
-    transition: all 0.3s;
-    text-decoration: none;
+    width: 36px !important;
+    height: 36px !important;
+    background-color: #ff5800 !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    background: #ff5800;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 88, 0, 0.4);
+    background-color: #cc4a00 !important;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
+    border-top: 1px solid #555555;
+    padding-top: 20px;
     text-align: center;
 }
 
 .footer-bottom p {
-    color: #999;
-    margin: 0;
-    font-size: 0.9rem;
+    color: #999999 !important;
+    margin: 0 !important;
+    font-size: 14px !important;
 }
 
-/* Quick Links Section */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.8rem;
-}
-
-.footer-section ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: all 0.3s;
-    position: relative;
-    padding-left: 15px;
-}
-
-.footer-section ul li a::before {
-    content: '▶';
-    position: absolute;
-    left: 0;
-    color: #ff5800;
-    font-size: 0.8rem;
-    transition: transform 0.3s;
-}
-
-.footer-section ul li a:hover {
-    color: #ff5800;
-    padding-left: 20px;
-}
-
-.footer-section ul li a:hover::before {
-    transform: translateX(3px);
-}
-
-@media (max-width: 768px) {
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
     .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
         text-align: center;
     }
     
-    .footer {
-        padding: 40px 0 20px;
+    .footer-section {
+        min-width: 100%;
+        margin-bottom: 25px;
     }
     
     .social-links {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 30px 0 15px !important;
+    }
+    
+    .footer-section {
+        padding: 0 10px;
+    }
+}
+
+/* Car Rental Page Styles - Hostinger Compatible */
+.car-fleet {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.car-fleet h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 3rem;
+}
+
+.fleet-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2rem;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+@media screen and (min-width: 769px) {
+    .fleet-grid {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        gap: 2rem !important;
+        -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+        justify-content: unset;
+    }
+}
+
+.car-card {
+    background: #ffffff !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+    border: 2px solid #ff5800 !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 400px !important;
+}
+
+.car-card:hover {
+    -webkit-transform: translateY(-5px) !important;
+    transform: translateY(-5px) !important;
+}
+
+.car-image-real {
+    width: 100% !important;
+    height: 200px !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    display: block !important;
+    border: none !important;
+    background-color: #f0f0f0 !important;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjBGMEYwIi8+CjxwYXRoIGQ9Ik0xNTAgMTAwTDE3MCA4MEgxMzBMMTUwIDEwMFoiIGZpbGw9IiNDQ0MiLz4KPHN2Zz4K') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 50px 50px !important;
+}
+
+.car-details {
+    padding: 1.5rem !important;
+    text-align: center !important;
+}
+
+.car-details h3 {
+    color: #000 !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+}
+
+.car-models {
+    color: #666 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.car-price {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    color: #ff5800 !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Rental Options Styles */
+.rental-options {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.options-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.option-card {
+    background: #ffffff !important;
+    padding: 2rem !important;
+    border-radius: 15px !important;
+    text-align: center !important;
+    -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    border: 2px solid #ff5800 !important;
+    -webkit-transition: all 0.3s ease !important;
+    transition: all 0.3s ease !important;
+    width: 250px !important;
+    max-width: 100% !important;
+}
+
+.option-card:hover {
+    -webkit-transform: translateY(-5px) !important;
+    transform: translateY(-5px) !important;
+}
+
+.option-card i {
+    font-size: 3rem !important;
+    color: #ff5800 !important;
+    margin-bottom: 1rem !important;
+}
+
+.option-card h3 {
+    color: #000 !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.3rem !important;
+}
+
+.option-card p {
+    color: #666 !important;
+    margin-bottom: 1rem !important;
+}
+
+.price {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    color: #ff5800 !important;
+}
+
+/* Enhanced Mobile Responsive for Car Rental */
+@media screen and (max-width: 1024px) {
+    .fleet-grid {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+        gap: 1.5rem !important;
+    }
+    
+    .car-card {
+        width: 45% !important;
+        min-width: 280px !important;
+        max-width: 320px !important;
+    }
+}
+
+/* Mobile Button Touch Optimization */
+@media screen and (max-width: 768px) {
+    .btn-primary {
+        min-height: 44px !important;
+        padding: 12px 20px !important;
+        font-size: 16px !important;
+        touch-action: manipulation;
+    }
+    
+    .option-card .btn-primary {
+        min-height: 44px !important;
+        padding: 12px 20px !important;
+    }
+    
+    .nav-toggle {
+        min-height: 44px !important;
+        min-width: 44px !important;
+        padding: 8px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .car-fleet {
+        padding: 40px 0 !important;
+    }
+    
+    .car-fleet h2 {
+        font-size: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .fleet-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+    }
+    
+    .options-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+    }
+    
+    .car-card {
+        width: 95% !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        border-radius: 15px !important;
+    }
+    
+    .option-card {
+        width: 95% !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+    }
+    
+    .car-image-real {
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        border-radius: 15px 15px 0 0 !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .car-details {
+        padding: 1.2rem !important;
+        flex-grow: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .car-details h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .car-price {
+        font-size: 1.3rem !important;
+    }
+    
+    .rental-options {
+        padding: 40px 0 !important;
+    }
+    
+    .option-card {
+        padding: 1.5rem !important;
+    }
+    
+    .option-card i {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 15px !important;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .car-fleet h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .car-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 1.5rem auto !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        min-height: 350px !important;
+    }
+    
+    .option-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 1.5rem auto !important;
+        box-sizing: border-box !important;
+    }
+    
+    .car-image-real {
+        height: 180px !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: 15px 15px 0 0 !important;
+        flex-shrink: 0 !important;
+        min-height: 180px !important;
+        max-height: 180px !important;
+        display: block !important;
+    }
+    
+    .car-details {
+        padding: 1rem !important;
+        flex-grow: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .car-details h3 {
+        font-size: 1rem !important;
+    }
+    
+    .car-models {
+        font-size: 0.8rem !important;
+    }
+    
+    .car-price {
+        font-size: 1.2rem !important;
+    }
+    
+    .btn-primary {
+        padding: 8px 16px !important;
+        font-size: 0.9rem !important;
+        width: 100% !important;
+        margin-top: auto !important;
+    }
+    
+    .option-card {
+        padding: 1.2rem !important;
+    }
+    
+    .option-card h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .option-card p {
+        font-size: 0.9rem !important;
+    }
+    
+    .price {
+        font-size: 1.3rem !important;
+    }
+    
+    .fleet-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        padding: 0 10px !important;
+        width: 100% !important;
     }
 }
 /* Car Image Styling */
 .car-image-real {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-    background: #f0f0f0;
-    display: block;
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 15px 15px 0 0 !important;
+    background: #f0f0f0 !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+    min-height: 200px !important;
+    max-height: 200px !important;
+}
+
+/* Mobile Car Image Fix - Final */
+@media screen and (max-width: 768px) {
+    .car-image-real {
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        border-radius: 15px 15px 0 0 !important;
+        flex-shrink: 0 !important;
+        background-size: cover !important;
+    }
+    
+    .car-card {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto 1.5rem auto !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        border-radius: 15px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .fleet-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+    }
 }
 
 .car-image-real:not([src]), .car-image-real[src=""] {
@@ -3429,24 +3869,65 @@ body {
     font-size: 3rem;
 }
 
-.fleet-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-@media (max-width: 768px) {
+/* Desktop Fleet Grid - Horizontal Scroll */
+@media screen and (min-width: 769px) {
     .fleet-grid {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 1.5rem !important;
+        margin-top: 2rem !important;
+        padding: 10px 0 20px 0 !important;
+        scroll-behavior: smooth !important;
+        align-items: stretch !important;
+    }
+    
+    .fleet-grid .car-card {
+        flex: 0 0 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+        height: auto !important;
     }
 }
 
-@media (max-width: 1024px) {
+/* Mobile Fleet Grid - Vertical Stack */
+@media screen and (max-width: 768px) {
     .fleet-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+        margin-top: 2rem !important;
+        padding: 0 15px !important;
+        overflow: visible !important;
+    }
+    
+    .fleet-grid .car-card {
+        width: 100% !important;
+        max-width: 350px !important;
+        flex: none !important;
     }
 }
+
+.fleet-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.fleet-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.fleet-grid::-webkit-scrollbar-thumb {
+    background: #ff5800;
+    border-radius: 10px;
+}
+
+.fleet-grid::-webkit-scrollbar-thumb:hover {
+    background: #cc4a00;
+}
+
+
 /* Booking Modal Styles */
 .modal {
     display: none;
@@ -3554,4 +4035,234 @@ body {
         margin: 10% auto;
         width: 95%;
     }
+}
+/* Self Drive Cars Section */
+.self-drive-cars {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.self-drive-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 1.5rem !important;
+    margin-top: 2rem !important;
+    padding: 10px 0 20px 0 !important;
+    scroll-behavior: smooth !important;
+    align-items: stretch !important;
+}
+
+.self-drive-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.self-drive-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.self-drive-grid::-webkit-scrollbar-thumb {
+    background: #ff5800;
+    border-radius: 10px;
+}
+
+.self-drive-grid::-webkit-scrollbar-thumb:hover {
+    background: #cc4a00;
+}
+
+.self-drive-card {
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #ff5800;
+    transition: all 0.3s;
+    flex: 0 0 300px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 400px !important;
+}
+
+.self-drive-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.self-drive-card i {
+    font-size: 3rem;
+    color: #ff5800;
+    margin-bottom: 1rem;
+}
+
+.self-drive-card h3 {
+    color: #000;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.self-drive-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.self-drive-card .price {
+    color: #ff5800;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .self-drive-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .self-drive-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+/* Luxurious Tempo and AC Bus Section */
+.tempo-bus-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.tempo-bus-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 1.5rem !important;
+    margin-top: 2rem !important;
+    padding: 10px 0 20px 0 !important;
+    scroll-behavior: smooth !important;
+    align-items: stretch !important;
+}
+
+.tempo-bus-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tempo-bus-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.tempo-bus-grid::-webkit-scrollbar-thumb {
+    background: #ff5800;
+    border-radius: 10px;
+}
+
+.tempo-bus-grid::-webkit-scrollbar-thumb:hover {
+    background: #cc4a00;
+}
+
+.tempo-bus-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #ff5800;
+    transition: all 0.3s;
+    flex: 0 0 320px !important;
+    min-width: 320px !important;
+    max-width: 320px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 420px !important;
+    overflow: hidden;
+}
+
+.tempo-bus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.tempo-bus-card .car-details {
+    padding: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tempo-bus-card h3 {
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.tempo-bus-card p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.vehicle-specs {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.vehicle-specs .spec-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.vehicle-specs .spec-item i {
+    margin-right: 6px;
+    color: #ff5800;
+}
+
+.tempo-bus-card .price {
+    color: #ff5800;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.tempo-bus-card .btn-primary {
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .tempo-bus-card {
+        flex: 0 0 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+    }
+}
+/* Bus Image Specific Styling */
+.bus-image {
+    width: 100% !important;
+    height: 160px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 15px 15px 0 0 !important;
+    display: block !important;
+    background: #f0f0f0 !important;
+}
+/* Tour destination image styling */
+.tour-destination-img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: #f8f9fa;
+    padding: 10px;
 }

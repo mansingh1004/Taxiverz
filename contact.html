@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Taxiverz</title>
+    <meta name="google-site-verification" content="23ajximOhjcSaplr5OFe6VXTGeWWE8bWWp-hZwpNMpI" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="alignment-fix.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -13,11 +14,21 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
+                <img src="taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="tours.html" class="nav-link">Tours</a>
+                <div class="nav-dropdown">
+                    <a href="tours.html" class="nav-link">Local Taxi <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="gorakhpur-to-nepal.html">Gorakhpur to Nepal</a>
+                        <a href="gorakhpur-to-ayodhya.html">Gorakhpur to Ayodhya</a>
+                        <a href="gorakhpur-to-banaras.html">Gorakhpur to Banaras</a>
+                        <a href="gorakhpur-to-lucknow.html">Gorakhpur to Lucknow</a>
+                        <hr>
+                        <a href="tours.html" class="view-all">View All Routes</a>
+                    </div>
+                </div>
                 <a href="car-rental.html" class="nav-link">Car Rental</a>
                 <a href="wedding.html" class="nav-link">Wedding Cars</a>
                 <a href="about.html" class="nav-link">About</a>
@@ -169,23 +180,23 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="footer-logo-img">
+                        <img src="taxiverz.avif" alt="Taxiverz Logo" class="footer-logo-img">
                     </div>
                     <p>Your trusted travel partner</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <a href="index.html">Home</a>
-                    <a href="tours.html">Tours</a>
+                    <a href="tours.html">Local Taxi</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-section">
                     <h4>Follow Us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/share/1Bpqo1dubB/" target="_blank"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/travel_nepal_club?igsh=cGI0czA0Y2s0MzJm" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -194,6 +205,70 @@
             </div>
         </div>
     </footer>
+
+    <style>
+        /* Dropdown Menu Styles */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .nav-dropdown .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ff5800;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #e04900;
+        }
+        
+        .dropdown-content .view-all {
+            background-color: #ff5800;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .dropdown-content .view-all:hover {
+            background-color: #e04900;
+        }
+        
+        .dropdown-content hr {
+            margin: 0;
+            border: none;
+            border-top: 1px solid #e04900;
+        }
+        
+        .nav-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .nav-dropdown:hover .nav-link i {
+            transform: rotate(180deg);
+            transition: transform 0.3s;
+        }
+    </style>
 
     <script src="script.js"></script>
 </body>
