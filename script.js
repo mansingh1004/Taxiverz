@@ -1,11 +1,53 @@
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle - Fixed
 const mobileMenu = document.getElementById('mobile-menu');
 const navMenu = document.getElementById('nav-menu');
+const mobileMenuSticky = document.getElementById('mobile-menu-sticky');
+const navMenuSticky = document.getElementById('nav-menu-sticky');
 
+// Main carousel navigation toggle
 if (mobileMenu && navMenu) {
-    mobileMenu.addEventListener('click', () => {
+    mobileMenu.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         mobileMenu.classList.toggle('active');
         navMenu.classList.toggle('active');
+    });
+}
+
+// Sticky navigation toggle
+if (mobileMenuSticky && navMenuSticky) {
+    mobileMenuSticky.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        mobileMenuSticky.classList.toggle('active');
+        navMenuSticky.classList.toggle('active');
+    });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    // Close main nav menu
+    if (navMenu && !navMenu.contains(e.target) && !mobileMenu?.contains(e.target)) {
+        navMenu.classList.remove('active');
+        if (mobileMenu) mobileMenu.classList.remove('active');
+    }
+    // Close sticky nav menu
+    if (navMenuSticky && !navMenuSticky.contains(e.target) && !mobileMenuSticky?.contains(e.target)) {
+        navMenuSticky.classList.remove('active');
+        if (mobileMenuSticky) mobileMenuSticky.classList.remove('active');
+    }
+});
+
+// Prevent menu from closing when clicking inside
+if (navMenu) {
+    navMenu.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+}
+
+if (navMenuSticky) {
+    navMenuSticky.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
 }
 
@@ -42,16 +84,9 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Mobile menu for sticky nav
-const mobileMenuSticky = document.getElementById('mobile-menu-sticky');
-const navMenuSticky = document.getElementById('nav-menu-sticky');
+// Mobile menu for sticky nav - REMOVED (already handled above)
 
-if (mobileMenuSticky && navMenuSticky) {
-    mobileMenuSticky.addEventListener('click', () => {
-        mobileMenuSticky.classList.toggle('active');
-        navMenuSticky.classList.toggle('active');
-    });
-}
+// Close sticky mobile menu when clicking outside - REMOVED (already handled above)
 
 // Form Submission Handler
 const contactForm = document.querySelector('.contact-form');

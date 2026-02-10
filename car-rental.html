@@ -17,8 +17,72 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="alignment-fix.css">
     <link rel="stylesheet" href="car-rental-fix.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="mobile-responsive.css">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* Dropdown CSS Fix */
+        /* Dropdown Menu Styles */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .nav-dropdown .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ff5800;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #e04900;
+        }
+        
+        .dropdown-content .view-all {
+            background-color: #ff5800;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .dropdown-content .view-all:hover {
+            background-color: #e04900;
+        }
+        
+        .dropdown-content hr {
+            margin: 0;
+            border: none;
+            border-top: 1px solid #e04900;
+        }
+        
+        .nav-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .nav-dropdown:hover .nav-link i {
+            transform: rotate(180deg);
+            transition: transform 0.3s;
+        }
+    </style>    <style>
         .car-specs {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -58,6 +122,50 @@
             height: auto !important;
             flex: none !important;
             min-width: auto !important;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 1200px) {
+            .fleet-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .fleet-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 1.5rem !important;
+            }
+            
+            .fleet-grid .car-card {
+                width: 100% !important;
+                max-width: 350px !important;
+            }
+            
+            .options-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem !important;
+            }
+            
+            .page-header p {
+                font-size: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.8rem !important;
+            }
         }
         
         /* Dropdown Menu Styles */
@@ -254,23 +362,263 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹1200/Day</div>
                         </div>
-                        <div class="car-price">₹8/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Swift Dzire', '₹8/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
                 <div class="car-card">
-                    <img src="toyota etios1.png" alt="Innova Etios" class="car-image-real" onerror="this.style.display='none';">
+                    <img src="wagnor.png" alt="WagonR Hatchback" class="car-image-real">
                     <div class="car-details">
-                        <h3>Toyota Etios</h3>
-                        <p class="car-models">Compact SUV</p>
+                        <h3>WagonR</h3>
+                        <p class="car-models">Hatchback</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹1000/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('WagonR', '₹7/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="verna.png" alt="Hyundai Verna Sedan" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Hyundai Verna</h3>
+                        <p class="car-models">Premium Sedan</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 4</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹1400/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Hyundai Verna', '₹9/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="scorpio.png" alt="Mahindra Scorpio SUV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Mahindra Scorpio</h3>
+                        <p class="car-models">SUV</p>
                         <div class="car-specs">
                             <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
                             <div class="spec-item"><i class="fas fa-users"></i> Passenger: 7</div>
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
-                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2500/Day</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2800/Day</div>
                         </div>
-                        <div class="car-price">₹16/km</div>
-                        <button class="btn-primary" onclick="openBookingModal('Innova Etios', '₹16/km')" style="background: #007bff !important;">Book Now</button>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Mahindra Scorpio', '₹19/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="jeep.png" alt="Jeep SUV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Jeep</h3>
+                        <p class="car-models">Luxury SUV</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹3500/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Jeep', '₹22/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="gypsy.jpeg" alt="Maruti Gypsy" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Maruti Gypsy</h3>
+                        <p class="car-models">Off-Road SUV</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 3</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 6</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2200/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Maruti Gypsy', '₹15/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="defender.png" alt="Land Rover Defender" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Land Rover Defender</h3>
+                        <p class="car-models">Luxury Off-Road SUV</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 7</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹6000/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Land Rover Defender', '₹40/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="Thar.png" alt="Mahindra Thar" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Mahindra Thar</h3>
+                        <p class="car-models">Adventure SUV</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 3</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 4</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4500/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Mahindra Thar', '₹30/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="bmw 320d.png" alt="BMW 320d" class="car-image-real">
+                    <div class="car-details">
+                        <h3>BMW 320d</h3>
+                        <p class="car-models">Executive Sedan</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 4</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4200/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('BMW 320d', '₹28/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="bmw 520d.png" alt="BMW 520d" class="car-image-real">
+                    <div class="car-details">
+                        <h3>BMW 520d</h3>
+                        <p class="car-models">Luxury Sedan</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 4</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4800/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('BMW 520d', '₹32/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="bmw x1.png" alt="BMW X1" class="car-image-real">
+                    <div class="car-details">
+                        <h3>BMW X1</h3>
+                        <p class="car-models">Compact Luxury SUV</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹5000/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('BMW X1', '₹33/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="audi a4.jpeg" alt="Audi A4" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Audi A4</h3>
+                        <p class="car-models">Premium Sedan</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 4</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4200/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Audi A4', '₹28/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="audi a6.png" alt="Audi A6" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Audi A6</h3>
+                        <p class="car-models">Executive Sedan</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 4</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4800/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Audi A6', '₹32/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="audi8.jpeg" alt="Audi A8" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Audi A8</h3>
+                        <p class="car-models">Luxury Sedan</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 4</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹5800/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Audi A8', '₹39/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="audi q3.png" alt="Audi Q3" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Audi Q3</h3>
+                        <p class="car-models">Compact SUV</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4500/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Audi Q3', '₹30/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="audi q5.png" alt="Audi Q5" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Audi Q5</h3>
+                        <p class="car-models">Premium SUV</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹5200/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Audi Q5', '₹35/km')" style="background: #007bff !important;">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="audi q7.png" alt="Audi Q7" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Audi Q7</h3>
+                        <p class="car-models">Luxury SUV</p>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 7</div>
+                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
+                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹6500/Day</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000074</div>
+                        <button class="btn-primary" onclick="openBookingModal('Audi Q7', '₹43/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
 
@@ -285,7 +633,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹1800/Day</div>
                         </div>
-                        <div class="car-price">₹12/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Ertiga', '₹12/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -301,7 +649,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2200/Day</div>
                         </div>
-                        <div class="car-price">₹15/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Innova', '₹15/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -317,7 +665,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2700/Day</div>
                         </div>
-                        <div class="car-price">₹18/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Innova Crysta', '₹18/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -333,71 +681,11 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹3200/Day</div>
                         </div>
-                        <div class="car-price">₹22/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Fortuner', '₹22/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
-                <div class="car-card">
-                    <img src="thar1.jpg" alt="Thar Luxury SUV Gorakhpur" class="car-image-real" onerror="this.style.display='none';">
-                    <div class="car-details">
-                        <h3>Thar</h3>
-                        <p class="car-models">Luxury SUV</p>
-                        <div class="car-specs">
-                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
-                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 7</div>
-                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
-                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4500/Day</div>
-                        </div>
-                        <div class="car-price">₹30/km</div>
-                        <button class="btn-primary" onclick="openBookingModal('Thar', '₹30/km')" style="background: #007bff !important;">Book Now</button>
-                    </div>
-                </div>
-                 <div class="car-card">
-                    <img src="toyota hilux.avif" alt="Toyota Hilux" class="car-image-real" onerror="this.style.display='none';">
-                    <div class="car-details">
-                        <h3>Toyota Hilux</h3>
-                        <p class="car-models">Pickup Truck</p>
-                        <div class="car-specs">
-                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 4</div>
-                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 5</div>
-                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
-                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹3000/Day</div>
-                        </div>
-                        <div class="car-price">₹20/km</div>
-                        <button class="btn-primary" onclick="openBookingModal('Toyota Hilux', '₹20/km')" style="background: #007bff !important;">Book Now</button>
-                    </div>
-                </div>
-                <div class="car-card">
-                    <img src="toyota hiace.avif" alt="Toyota Hiace Nepal" class="car-image-real" onerror="this.style.display='none';">
-                    <div class="car-details">
-                        <h3>Toyota Hiace</h3>
-                        <p class="car-models">Only for Nepal</p>
-                        <div class="car-specs">
-                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
-                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 12</div>
-                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
-                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹3500/Day</div>
-                        </div>
-                        <div class="car-price">₹24/km</div>
-                        <button class="btn-primary" onclick="openBookingModal('Toyota Hiace', '₹24/km')" style="background: #007bff !important;">Book Now</button>
-                    </div>
-                </div>
 
-                <div class="car-card">
-                    <img src="car4.jpeg" alt="Range Rover Luxury SUV Gorakhpur" class="car-image-real" onerror="this.style.display='none';">
-                    <div class="car-details">
-                        <h3>Range Rover</h3>
-                        <p class="car-models">Luxury SUV</p>
-                        <div class="car-specs">
-                            <div class="spec-item"><i class="fas fa-door-open"></i> Doors: 5</div>
-                            <div class="spec-item"><i class="fas fa-users"></i> Passenger: 7</div>
-                            <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
-                            <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4500/Day</div>
-                        </div>
-                        <div class="car-price">₹30/km</div>
-                        <button class="btn-primary" onclick="openBookingModal('Range Rover', '₹30/km')" style="background: #007bff !important;">Book Now</button>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -421,7 +709,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4200/Day</div>
                         </div>
-                        <div class="car-price">₹28/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('BMW 320d', '₹28/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -437,7 +725,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4800/Day</div>
                         </div>
-                        <div class="car-price">₹32/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('BMW 520d', '₹32/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -453,7 +741,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4500/Day</div>
                         </div>
-                        <div class="car-price">₹30/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Mercedes C Class', '₹30/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -469,7 +757,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹5200/Day</div>
                         </div>
-                        <div class="car-price">₹35/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Mercedes E Class', '₹35/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -485,7 +773,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹6000/Day</div>
                         </div>
-                        <div class="car-price">₹40/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Mercedes S Class', '₹40/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -501,7 +789,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4000/Day</div>
                         </div>
-                        <div class="car-price">₹27/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Jaguar XE', '₹27/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -517,7 +805,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4800/Day</div>
                         </div>
-                        <div class="car-price">₹32/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Jaguar XF', '₹32/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -533,7 +821,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹5500/Day</div>
                         </div>
-                        <div class="car-price">₹37/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Jaguar XJL', '₹37/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -549,7 +837,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4200/Day</div>
                         </div>
-                        <div class="car-price">₹28/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Audi A4', '₹28/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -565,7 +853,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4800/Day</div>
                         </div>
-                        <div class="car-price">₹32/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Audi A6', '₹32/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -581,7 +869,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹5800/Day</div>
                         </div>
-                        <div class="car-price">₹39/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Audi A8', '₹39/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -597,7 +885,7 @@
                             <div class="spec-item"><i class="fas fa-snowflake"></i> Air Conditioning: Yes</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹6000/Day</div>
                         </div>
-                        <div class="car-price">₹40/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Land Rover Defender', '₹40/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -622,7 +910,7 @@
                             <div class="spec-item"><i class="fas fa-flag"></i> Campaign Ready</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹3000/Day</div>
                         </div>
-                        <div class="car-price">₹20/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Ambassador White', '₹20/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -638,7 +926,7 @@
                             <div class="spec-item"><i class="fas fa-crown"></i> VIP Style</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹3500/Day</div>
                         </div>
-                        <div class="car-price">₹23/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Ambassador Black', '₹23/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -654,7 +942,7 @@
                             <div class="spec-item"><i class="fas fa-bullhorn"></i> Rally Ready</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹4000/Day</div>
                         </div>
-                        <div class="car-price">₹25/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Vintage Jeep', '₹25/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -670,7 +958,7 @@
                             <div class="spec-item"><i class="fas fa-star"></i> Eye Catching</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹2500/Day</div>
                         </div>
-                        <div class="car-price">₹18/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Royal Enfield Sidecar', '₹18/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -695,7 +983,7 @@
                             <div class="spec-item"><i class="fas fa-wind"></i> Convertible Top</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹8000/Day</div>
                         </div>
-                        <div class="car-price">₹50/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('BMW Z4 Convertible', '₹50/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -711,7 +999,7 @@
                             <div class="spec-item"><i class="fas fa-wind"></i> Soft Top</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹7500/Day</div>
                         </div>
-                        <div class="car-price">₹45/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Audi A5 Convertible', '₹45/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -727,7 +1015,7 @@
                             <div class="spec-item"><i class="fas fa-wind"></i> Retractable Hardtop</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹9000/Day</div>
                         </div>
-                        <div class="car-price">₹55/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Mercedes SLK', '₹55/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -743,7 +1031,7 @@
                             <div class="spec-item"><i class="fas fa-wind"></i> Soft Top</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹10000/Day</div>
                         </div>
-                        <div class="car-price">₹60/km</div>
+                        <div class="car-price">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Jaguar F-Type', '₹60/km')" style="background: #007bff !important;">Book Now</button>
                     </div>
                 </div>
@@ -768,7 +1056,7 @@
                             <div class="spec-item"><i class="fas fa-crown"></i> Ultra Luxury</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹25000/Day</div>
                         </div>
-                        <div class="car-price" style="color: #ffd700;">₹150/km</div>
+                        <div class="car-price" style="color: #ffd700;">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Bentley Continental', '₹150/km')" style="background: #ffd700 !important; color: #000;">Book Now</button>
                     </div>
                 </div>
@@ -784,7 +1072,7 @@
                             <div class="spec-item"><i class="fas fa-gem"></i> Royal Experience</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹50000/Day</div>
                         </div>
-                        <div class="car-price" style="color: #ffd700;">₹300/km</div>
+                        <div class="car-price" style="color: #ffd700;">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Rolls Royce Phantom', '₹300/km')" style="background: #ffd700 !important; color: #000;">Book Now</button>
                     </div>
                 </div>
@@ -800,7 +1088,7 @@
                             <div class="spec-item"><i class="fas fa-shield-alt"></i> Premium Safety</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹18000/Day</div>
                         </div>
-                        <div class="car-price" style="color: #ffd700;">₹120/km</div>
+                        <div class="car-price" style="color: #ffd700;">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('GMC Yukon Denali', '₹120/km')" style="background: #ffd700 !important; color: #000;">Book Now</button>
                     </div>
                 </div>
@@ -816,7 +1104,7 @@
                             <div class="spec-item"><i class="fas fa-star"></i> Handcrafted</div>
                             <div class="spec-item"><i class="fas fa-calendar-day"></i> Price: ₹35000/Day</div>
                         </div>
-                        <div class="car-price" style="color: #ffd700;">₹200/km</div>
+                        <div class="car-price" style="color: #ffd700;">📞 +91-8576000074</div>
                         <button class="btn-primary" onclick="openBookingModal('Bentley Mulsanne', '₹200/km')" style="background: #ffd700 !important; color: #000;">Book Now</button>
                     </div>
                 </div>
@@ -918,3 +1206,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

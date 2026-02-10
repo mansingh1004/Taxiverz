@@ -3,22 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Taxiverz</title>
-    <meta name="google-site-verification" content="23ajximOhjcSaplr5OFe6VXTGeWWE8bWWp-hZwpNMpI" />
-    <link rel="stylesheet" href="style.css">
-
+    <title>About Us - Taxiverz | Best Taxi Service in Gorakhpur</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .navbar { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 1rem 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo-img { height: 50px; width: auto; max-width: 150px; object-fit: contain; }
+        .nav-menu { display: flex; gap: 2rem; }
+        .nav-link { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #ff5800; }
+        .nav-toggle { display: none; flex-direction: column; cursor: pointer; }
+        .bar { width: 25px; height: 3px; background: #000; margin: 3px 0; transition: 0.3s; }
+        .about-section { padding: 120px 0 80px; }
+        .page-header { background: url('carrental.jpg') center/cover; position: relative; min-height: 400px; display: flex; align-items: center; justify-content: center; margin-top: 80px; }
+        .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); }
+        .page-header .container { position: relative; z-index: 2; text-align: center; color: white; }
+        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
+        .page-header p { font-size: 1.2rem; opacity: 0.9; }
+        .about-content h1 { font-size: 3rem; color: #000; margin-bottom: 2rem; text-align: center; }
+        .about-content p { font-size: 1.1rem; color: #666; margin-bottom: 2rem; text-align: center; line-height: 1.8; }
+        .btn-primary { background: #ff5800; color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; }
+        .btn-primary:hover { background: #cc4a00; transform: translateY(-2px); }
+        .footer { background: #000; color: white; padding: 40px 0 20px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-logo-img { height: 60px; width: auto; max-width: 180px; object-fit: contain; background: white; padding: 10px; border-radius: 8px; }
+        .footer-section h4 { margin-bottom: 1rem; color: #ff5800; }
+        .footer-section p { color: #ccc; margin-bottom: 0.5rem; }
+        .footer-section i { color: #ff5800; margin-right: 0.5rem; }
+        @media (max-width: 768px) {
+            .nav-menu { position: fixed; left: -200px; top: 70px; flex-direction: column; background: white; width: 200px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2); padding: 0.5rem 0; z-index: 9999; border-radius: 0 0 10px 0; border-right: 2px solid #ff5800; }
+            .nav-menu .nav-link { padding: 0.8rem 1rem; border-bottom: 1px solid #f0f0f0; display: block; }
+            .nav-menu.active { left: 0; }
+            .nav-toggle { display: flex; }
+            .page-header h1 { font-size: 2rem; }
+            .page-header p { font-size: 1rem; }
+            .container { padding: 0 15px; }
+            .mission-vision > div { grid-template-columns: 1fr; gap: 2rem; }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
+                <img src="taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="tours.html" class="nav-link">Tours</a>
+                <a href="tours.html" class="nav-link">Taxi Service</a>
                 <a href="car-rental.html" class="nav-link">Car Rental</a>
                 <a href="wedding.html" class="nav-link">Wedding Cars</a>
                 <a href="about.html" class="nav-link active">About</a>
@@ -36,119 +72,95 @@
     <section class="page-header">
         <div class="container">
             <h1>About Taxiverz</h1>
-            <p>Your Trusted Travel Partner Since 2019</p>
+            <p>Your trusted travel partner in Gorakhpur</p>
         </div>
     </section>
 
-    <!-- About Content -->
-    <section class="about-content">
+    <!-- About Section -->
+    <section class="about-section" style="padding: 80px 0;">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-text" style="display: block; width: 100%;">
-                    <h2 style="display: block; width: 100%; font-size: 2.5rem; margin-bottom: 1.5rem; color: #000;">Our Story</h2>
-                    <p style="display: block; width: 100%; color: #666; line-height: 1.7; margin-bottom: 1.5rem;">Founded in 2019, Taxiverz has grown from a small local taxi service to one of India's most trusted transportation companies. We started with a simple mission: to provide safe, reliable, and affordable travel solutions for everyone.</p>
-                    <p style="display: block; width: 100%; color: #666; line-height: 1.7; margin-bottom: 1.5rem;">Today, we serve over 500 cities across India with a fleet of more than 1000 vehicles and a team of professional drivers who are committed to excellence.</p>
-                    
-                    <h3 style="display: block; width: 100%; font-size: 1.8rem; margin: 2.5rem 0 1rem 0; color: #ff5800;">Our Mission</h3>
-                    <p style="display: block; width: 100%; color: #666; line-height: 1.7; margin-bottom: 1.5rem;">To revolutionize the transportation industry by providing world-class service, ensuring customer satisfaction, and maintaining the highest standards of safety and reliability.</p>
-                    
-                    <h3 style="display: block; width: 100%; font-size: 1.8rem; margin: 2.5rem 0 1rem 0; color: #ff5800;">Our Vision</h3>
-                    <p style="display: block; width: 100%; color: #666; line-height: 1.7; margin-bottom: 1.5rem;">To become India's leading transportation service provider, connecting people and places with comfort, convenience, and care.</p>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-users fa-5x"></i>
+            <div class="about-content">
+                <h1>About Taxiverz</h1>
+                <p>Welcome to Taxiverz, your trusted travel partner in Gorakhpur. We are committed to providing reliable, safe, and comfortable transportation services 24/7.</p>
+                
+                <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                    <div class="about-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <i class="fas fa-car" style="font-size: 3rem; color: #ff5800; margin-bottom: 1rem;"></i>
+                        <h3>Our Fleet</h3>
+                        <p>Modern, well-maintained vehicles ranging from economy cars to luxury SUVs and buses for all your travel needs.</p>
+                    </div>
+                    <div class="about-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <i class="fas fa-users" style="font-size: 3rem; color: #ff5800; margin-bottom: 1rem;"></i>
+                        <h3>Professional Drivers</h3>
+                        <p>Experienced, licensed, and courteous drivers who prioritize your safety and comfort throughout the journey.</p>
+                    </div>
+                    <div class="about-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <i class="fas fa-clock" style="font-size: 3rem; color: #ff5800; margin-bottom: 1rem;"></i>
+                        <h3>24/7 Service</h3>
+                        <p>Round-the-clock availability for all your transportation needs, whether it's an emergency or planned trip.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <i class="fas fa-users"></i>
-                    <h3>50,000+</h3>
-                    <p>Happy Customers</p>
+                <div class="why-choose-us" style="margin: 4rem 0;">
+                    <h2>Why Choose Taxiverz?</h2>
+                    <div class="features-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div class="feature-item" style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: #ff5800; font-size: 1.5rem;"></i>
+                            <span>Competitive Pricing</span>
+                        </div>
+                        <div class="feature-item" style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: #ff5800; font-size: 1.5rem;"></i>
+                            <span>GPS Tracking</span>
+                        </div>
+                        <div class="feature-item" style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: #ff5800; font-size: 1.5rem;"></i>
+                            <span>Clean & Sanitized Vehicles</span>
+                        </div>
+                        <div class="feature-item" style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: #ff5800; font-size: 1.5rem;"></i>
+                            <span>Easy Online Booking</span>
+                        </div>
+                        <div class="feature-item" style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: #ff5800; font-size: 1.5rem;"></i>
+                            <span>Multiple Payment Options</span>
+                        </div>
+                        <div class="feature-item" style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: #ff5800; font-size: 1.5rem;"></i>
+                            <span>Customer Support</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>500+</h3>
-                    <p>Cities Covered</p>
-                </div>
-                <div class="stat-card">
-                    <i class="fas fa-car"></i>
-                    <h3>1000+</h3>
-                    <p>Vehicles</p>
-                </div>
-                <div class="stat-card">
-                    <i class="fas fa-clock"></i>
-                    <h3>24/7</h3>
-                    <p>Service Available</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <h2>Our Leadership Team</h2>
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-image">
-                        <i class="fas fa-user-tie fa-3x"></i>
+                <div class="mission-vision" style="margin: 4rem 0;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+                        <div class="mission-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 5px solid #ff5800;">
+                            <div style="text-align: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-bullseye" style="font-size: 3rem; color: #ff5800; margin-bottom: 1rem;"></i>
+                                <h3 style="color: #000; font-size: 1.8rem;">Our Mission</h3>
+                            </div>
+                            <p style="color: #666; line-height: 1.7; text-align: justify;">To provide safe, reliable, and affordable transportation services to the people of Gorakhpur and surrounding areas. We are committed to delivering exceptional customer service while maintaining the highest standards of vehicle maintenance and driver professionalism.</p>
+                        </div>
+                        <div class="vision-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 5px solid #ff5800;">
+                            <div style="text-align: center; margin-bottom: 1.5rem;">
+                                <i class="fas fa-eye" style="font-size: 3rem; color: #ff5800; margin-bottom: 1rem;"></i>
+                                <h3 style="color: #000; font-size: 1.8rem;">Our Vision</h3>
+                            </div>
+                            <p style="color: #666; line-height: 1.7; text-align: justify;">To become the leading taxi and car rental service provider in Eastern Uttar Pradesh, known for our reliability, innovation, and customer-centric approach. We envision a future where every journey with Taxiverz is comfortable, safe, and memorable.</p>
+                        </div>
                     </div>
-                    <h4>Rajesh Kumar</h4>
-                    <p>Founder & CEO</p>
-                    <span>15+ years in transportation industry</span>
                 </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <i class="fas fa-user-tie fa-3x"></i>
-                    </div>
-                    <h4>Priya Sharma</h4>
-                    <p>Operations Director</p>
-                    <span>Expert in fleet management</span>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <i class="fas fa-user-tie fa-3x"></i>
-                    </div>
-                    <h4>Amit Patel</h4>
-                    <p>Technology Head</p>
-                    <span>Leading digital transformation</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Values Section -->
-    <section class="values-section">
-        <div class="container">
-            <h2>Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Safety First</h4>
-                    <p>We prioritize the safety of our customers above everything else with verified drivers and well-maintained vehicles.</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-handshake"></i>
-                    <h4>Reliability</h4>
-                    <p>We are committed to providing consistent and dependable service that our customers can trust.</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-heart"></i>
-                    <h4>Customer Care</h4>
-                    <p>Our customers are at the heart of everything we do. We strive to exceed their expectations.</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Sustainability</h4>
-                    <p>We are committed to reducing our environmental impact through eco-friendly practices.</p>
+                <div class="contact-cta" style="background: #ff5800; color: white; padding: 3rem; border-radius: 15px; text-align: center; margin-top: 3rem;">
+                    <h2>Ready to Book Your Ride?</h2>
+                    <p>Contact us now for reliable taxi service in Gorakhpur</p>
+                    <div style="margin-top: 2rem;">
+                        <a href="tel:+918576000074" style="color: white; text-decoration: none; font-size: 1.5rem; margin-right: 2rem;">
+                            <i class="fas fa-phone"></i> +91-8576000074
+                        </a>
+                        <a href="mailto:cabtaxiverz@gmail.com" style="color: white; text-decoration: none; font-size: 1.2rem;">
+                            <i class="fas fa-envelope"></i> cabtaxiverz@gmail.com
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,44 +172,31 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="footer-logo-img">
+                        <img src="taxiverz.avif" alt="Taxiverz Logo" class="footer-logo-img">
                     </div>
-                    <h3>Taxiverz</h3>
-                    <p>Your trusted travel partner for comfortable and safe journeys across India and Nepal. Experience premium transportation services with professional drivers.</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="tours.html">Tour Packages</a></li>
-                        <li><a href="car-rental.html">Car Rental</a></li>
-                        <li><a href="wedding.html">Wedding Cars</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <p>Your trusted travel partner</p>
                 </div>
                 <div class="footer-section">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+918576000074">+91-8576000074</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:cabtaxiverz@gmail.com">cabtaxiverz@gmail.com</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> Railway Station Gate No-1, Gorakhpur, UP-273001</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Shop No-4 Chaudhari Heights, Warje, Pune, Maharashtra-411058</p>
-                    <p><i class="fas fa-clock"></i> 24/7 Service Available</p>
+                    <p><i class="fas fa-phone"></i> +91-8576000074</p>
+                    <p><i class="fas fa-envelope"></i> cabtaxiverz@gmail.com</p>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Taxiverz. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ff5800;"></i> for better travel experience</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (mobileMenu && navMenu) {
+                mobileMenu.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
