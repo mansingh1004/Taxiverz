@@ -274,17 +274,17 @@ function getBotResponse(message) {
     if (msg.includes('hello') || msg.includes('hi')) {
         return 'Hello! Welcome to Taxiverz. How can I help you today?';
     } else if (msg.includes('booking') || msg.includes('book')) {
-        return 'To book a taxi, please call us at +91-8576000074 or use our booking form on the website.';
+        return 'To book a taxi, please call us at +91-8576000083 or use our booking form on the website.';
     } else if (msg.includes('price') || msg.includes('fare')) {
         return 'Our fares start from ₹8/km for local rides and ₹12/km for outstation trips. Contact us for exact quotes.';
     } else if (msg.includes('contact') || msg.includes('phone')) {
-        return 'You can reach us at +91-8576000074 or email cabtaxiverz@gmail.com';
+        return 'You can reach us at +91-8576000083 or email cabtaxiverz@gmail.com';
     } else if (msg.includes('service') || msg.includes('area')) {
         return 'We provide services in 500+ cities across India including local taxi, outstation, airport transfers, and car rentals.';
     } else if (msg.includes('thank')) {
         return 'You\'re welcome! Is there anything else I can help you with?';
     } else {
-        return 'Thank you for your message. For detailed assistance, please call us at +91-8576000074 or email cabtaxiverz@gmail.com';
+        return 'Thank you for your message. For detailed assistance, please call us at +91-8576000083 or email cabtaxiverz@gmail.com';
     }
 }
 
