@@ -1009,7 +1009,7 @@
                         <div class="nav-logo">
                             <img src="taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
                         </div>
-                        <div class="nav-menu" id="nav-menu">
+                        <div class="nav-menu" id="nav-menu-carousel">
                             <a href="index.html" class="nav-link active">Home</a>
                              <div class="nav-dropdown">
                     <a href="tours.html" class="nav-link active">Taxi Service<i class="fas fa-chevron-down"></i></a>
@@ -1046,7 +1046,7 @@
                             <a href="about.html" class="nav-link">About</a>
                             <a href="contact.html" class="nav-link">Contact</a>
                         </div>
-                        <div class="nav-toggle" id="mobile-menu">
+                        <div class="nav-toggle" id="mobile-menu-carousel">
                             <span class="bar"></span>
                             <span class="bar"></span>
                             <span class="bar"></span>
@@ -1065,7 +1065,7 @@
                         <div class="nav-logo">
                             <img src="taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
                         </div>
-                        <div class="nav-menu" id="nav-menu">
+                        <div class="nav-menu" id="nav-menu-carousel2">
                             <a href="index.html" class="nav-link active">Home</a>
                              <div class="nav-dropdown">
                     <a href="tours.html" class="nav-link active">Taxi Service<i class="fas fa-chevron-down"></i></a>
@@ -1101,7 +1101,7 @@
                             <a href="about.html" class="nav-link">About</a>
                             <a href="contact.html" class="nav-link">Contact</a>
                         </div>
-                        <div class="nav-toggle" id="mobile-menu">
+                        <div class="nav-toggle" id="mobile-menu-carousel2">
                             <span class="bar"></span>
                             <span class="bar"></span>
                             <span class="bar"></span>
@@ -1866,7 +1866,7 @@
                         <div class="car-price">Wedding: ₹25,000 | Outstation: ₹100/km</div>
                         <p style="font-size: 11px; color: #666; margin-top: 8px;"><strong>NOTE:</strong> All payments Garage to Garage</p>
 
-                        <button class="btn-primary" onclick="window.location.href='tel:+918576000083'">Call Now</button>
+                        <button class="btn-primary" onclick="window.location.href='jaguar-xe.html'" style="background: #007bff !important;">View Details</button>
                     </div>
                 </div>
 
@@ -1886,7 +1886,7 @@
                         </div>
                         <div class="car-price">Wedding: ₹30,000 | Outstation: ₹120/km</div>
                         <p style="font-size: 11px; color: #666; margin-top: 8px;"><strong>NOTE:</strong> All payments Garage to Garage</p>
-                        <button class="btn-primary" onclick="window.location.href='tel:+918576000083'">Call Now</button>
+                        <button class="btn-primary" onclick="window.location.href='jaguar-xe.html'" style="background: #007bff !important;">View Details</button>
                     </div>
                 </div>
 
@@ -1906,7 +1906,7 @@
                         </div>
                         <div class="car-price">Wedding: ₹---- | Outstation: ₹---/km</div>
                         <p style="font-size: 11px; color: #666; margin-top: 8px;"><strong>NOTE:</strong> All payments Garage to Garage</p>
-                        <button class="btn-primary" onclick="window.location.href='tel:+918576000083'">Call Now</button>
+                        <button class="btn-primary" onclick="window.location.href='jaguar-xe.html'" style="background: #007bff !important;">View Details</button>
                     </div>
                 </div>
             </div>
@@ -2574,48 +2574,66 @@
     <script>
         // Mobile Navigation Toggle
         document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenus = document.querySelectorAll('#mobile-menu, #mobile-menu-sticky');
-            const navMenus = document.querySelectorAll('#nav-menu, #nav-menu-sticky');
+            const mobileMenuCarousel = document.getElementById('mobile-menu-carousel');
+            const navMenuCarousel = document.getElementById('nav-menu-carousel');
+            const mobileMenuCarousel2 = document.getElementById('mobile-menu-carousel2');
+            const navMenuCarousel2 = document.getElementById('nav-menu-carousel2');
+            const mobileMenuSticky = document.getElementById('mobile-menu-sticky');
+            const navMenuSticky = document.getElementById('nav-menu-sticky');
             
-            mobileMenus.forEach((mobileMenu, index) => {
-                if (mobileMenu && navMenus[index]) {
-                    mobileMenu.addEventListener('click', function() {
-                        navMenus[index].classList.toggle('active');
-                        mobileMenu.classList.toggle('active');
-                        
-                        // Prevent body scroll when menu is open
-                        if (navMenus[index].classList.contains('active')) {
-                            document.body.style.overflow = 'hidden';
-                        } else {
-                            document.body.style.overflow = 'auto';
-                        }
-                    });
+            if (mobileMenuCarousel && navMenuCarousel) {
+                mobileMenuCarousel.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navMenuCarousel.classList.toggle('active');
+                    mobileMenuCarousel.classList.toggle('active');
+                    document.body.style.overflow = navMenuCarousel.classList.contains('active') ? 'hidden' : 'auto';
+                });
+            }
+            
+            if (mobileMenuCarousel2 && navMenuCarousel2) {
+                mobileMenuCarousel2.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navMenuCarousel2.classList.toggle('active');
+                    mobileMenuCarousel2.classList.toggle('active');
+                    document.body.style.overflow = navMenuCarousel2.classList.contains('active') ? 'hidden' : 'auto';
+                });
+            }
+            
+            if (mobileMenuSticky && navMenuSticky) {
+                mobileMenuSticky.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navMenuSticky.classList.toggle('active');
+                    mobileMenuSticky.classList.toggle('active');
+                    document.body.style.overflow = navMenuSticky.classList.contains('active') ? 'hidden' : 'auto';
+                });
+            }
+            
+            document.addEventListener('click', function(event) {
+                if (navMenuCarousel && mobileMenuCarousel && !navMenuCarousel.contains(event.target) && !mobileMenuCarousel.contains(event.target)) {
+                    navMenuCarousel.classList.remove('active');
+                    mobileMenuCarousel.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+                if (navMenuCarousel2 && mobileMenuCarousel2 && !navMenuCarousel2.contains(event.target) && !mobileMenuCarousel2.contains(event.target)) {
+                    navMenuCarousel2.classList.remove('active');
+                    mobileMenuCarousel2.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+                if (navMenuSticky && mobileMenuSticky && !navMenuSticky.contains(event.target) && !mobileMenuSticky.contains(event.target)) {
+                    navMenuSticky.classList.remove('active');
+                    mobileMenuSticky.classList.remove('active');
+                    document.body.style.overflow = 'auto';
                 }
             });
             
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(event) {
-                navMenus.forEach((navMenu, index) => {
-                    if (navMenu && mobileMenus[index]) {
-                        if (!navMenu.contains(event.target) && !mobileMenus[index].contains(event.target)) {
-                            navMenu.classList.remove('active');
-                            mobileMenus[index].classList.remove('active');
-                            document.body.style.overflow = 'auto';
-                        }
-                    }
-                });
-            });
-            
-            // Close mobile menu when clicking on a link
-            navMenus.forEach((navMenu, index) => {
+            [navMenuCarousel, navMenuCarousel2, navMenuSticky].forEach(navMenu => {
                 if (navMenu) {
-                    const navLinks = navMenu.querySelectorAll('.nav-link');
-                    navLinks.forEach(link => {
+                    navMenu.querySelectorAll('.nav-link').forEach(link => {
                         link.addEventListener('click', function() {
                             navMenu.classList.remove('active');
-                            if (mobileMenus[index]) {
-                                mobileMenus[index].classList.remove('active');
-                            }
+                            if (navMenu === navMenuCarousel && mobileMenuCarousel) mobileMenuCarousel.classList.remove('active');
+                            if (navMenu === navMenuCarousel2 && mobileMenuCarousel2) mobileMenuCarousel2.classList.remove('active');
+                            if (navMenu === navMenuSticky && mobileMenuSticky) mobileMenuSticky.classList.remove('active');
                             document.body.style.overflow = 'auto';
                         });
                     });

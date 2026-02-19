@@ -20,6 +20,10 @@
         .features-list { list-style: none; padding: 0; }
         .features-list li { padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0; }
         .features-list li i { color: #ff5800; margin-right: 10px; }
+        .nav-toggle .bar { background: #ff5800 !important; }
+        .nav-toggle.active .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+        .nav-toggle.active .bar:nth-child(2) { opacity: 0; }
+        .nav-toggle.active .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
         @media (max-width: 768px) {
             .car-detail-grid { grid-template-columns: 1fr; }
             .car-specs-grid { grid-template-columns: 1fr; }
@@ -371,6 +375,27 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (mobileMenu && navMenu) {
+                mobileMenu.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
