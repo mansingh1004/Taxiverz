@@ -121,6 +121,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="alignment-fix.css">
     <link rel="stylesheet" href="mobile-responsive.css">
+    <link rel="stylesheet" href="footer-fix.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         /* Mobile Responsive Enhancements */
@@ -1222,7 +1223,24 @@
                 <p>Choose from our wide range of vehicles - Organized from most affordable to premium</p>
             </div>
             <!-- First Row -->
+             
             <div class="fleet-grid" style="margin-bottom: 2rem;">
+                      <div class="car-card">
+                    <img src="wagnor.png" alt="WagonR Hatchback" class="car-image-real">
+                    <div class="car-details">
+                        <h3>WagonR</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-car"></i> Type: Hatchback</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Seating: 5 (incl. Driver)</div>
+                            <div class="spec-item"><i class="fas fa-rupee-sign"></i> Price: ₹10/km</div>
+                            <div class="spec-item"><i class="fas fa-moon"></i> Night: ₹200 after 10 PM</div>
+                            <div class="spec-item"><i class="fas fa-road"></i> Min: 200 km/day</div>
+                            <div class="spec-item"><i class="fas fa-map-marked-alt"></i> Local & Outstation</div>
+                        </div>
+                        <div class="car-price">📞 +91-8576000083</div>
+                        <button class="btn-primary" onclick="window.location.href='tel:+918576000083'">Call Now</button>
+                    </div>
+                </div>
                 <div class="car-card">
                     <img src="car10.jpeg" alt="Swift Dzire Economy Sedan" class="car-image-real">
                     <div class="car-details">
@@ -1240,22 +1258,7 @@
                     </div>
                 </div>
 
-                <div class="car-card">
-                    <img src="wagnor.png" alt="WagonR Hatchback" class="car-image-real">
-                    <div class="car-details">
-                        <h3>WagonR</h3>
-                        <div class="car-specs">
-                            <div class="spec-item"><i class="fas fa-car"></i> Type: Hatchback</div>
-                            <div class="spec-item"><i class="fas fa-users"></i> Seating: 5 (incl. Driver)</div>
-                            <div class="spec-item"><i class="fas fa-rupee-sign"></i> Price: ₹11/km</div>
-                            <div class="spec-item"><i class="fas fa-moon"></i> Night: ₹200 after 10 PM</div>
-                            <div class="spec-item"><i class="fas fa-road"></i> Min: 200 km/day</div>
-                            <div class="spec-item"><i class="fas fa-map-marked-alt"></i> Local & Outstation</div>
-                        </div>
-                        <div class="car-price">📞 +91-8576000083</div>
-                        <button class="btn-primary" onclick="window.location.href='tel:+918576000083'">Call Now</button>
-                    </div>
-                </div>
+          
 
                 <div class="car-card">
                     <img src="verna.png" alt="Hyundai Verna Sedan" class="car-image-real">
@@ -1274,7 +1277,7 @@
                     </div>
                 </div>
                 <div class="car-card">
-                    <img src="" alt="Hyundai City Sedan" class="car-image-real">
+                    <img src="city.jpeg" alt="Hyundai City Sedan" class="car-image-real">
                     <div class="car-details">
                         <h3>Hyundai City</h3>
                         <div class="car-specs">
@@ -1371,13 +1374,15 @@
                         <h3>Mahindra Scorpio</h3>
                         <div class="car-specs">
                             <div class="spec-item"><i class="fas fa-car"></i> Type: SUV</div>
-                            <div class="spec-item"><i class="fas fa-users"></i> Seating: 7+1 (incl. Driver)</div>
-                            <div class="spec-item"><i class="fas fa-rupee-sign"></i> Price: ₹35/km</div>
-                            <div class="spec-item"><i class="fas fa-moon"></i> Night: ₹400 after 10 PM</div>
-                            <div class="spec-item"><i class="fas fa-road"></i> Min: 200 km/day</div>
-                            <div class="spec-item"><i class="fas fa-map-marked-alt"></i> Local & Outstation</div>
+                            <div class="spec-item"><i class="fas fa-users"></i> Seating: 7+1 & 6+1</div>
+                            <div class="spec-item"><i class="fas fa-city"></i> Local: 6hrs/60km @ ₹2200</div>
+                            <div class="spec-item"><i class="fas fa-clock"></i> 8hrs/80km @ ₹2800</div>
+                            <div class="spec-item"><i class="fas fa-calendar"></i> 12hrs/120km @ ₹3200</div>
+                            <div class="spec-item"><i class="fas fa-road"></i> Outstation: ₹16/km (Min 250km)</div>
+                            <div class="spec-item"><i class="fas fa-moon"></i> Night: ₹400 for Drivers (10 PM-6 AM)</div>
+                            <div class="spec-item"><i class="fas fa-plus-circle"></i> Extra: Toll, Parking, Border Tax</div>
                         </div>
-                        <div class="car-price">📞 +91-8576000083</div>
+                        <div class="car-price">Local: ₹2200+ | Outstation: ₹16/km</div>
                         <button class="btn-primary" onclick="window.location.href='tel:+918576000083'">Call Now</button>
                     </div>
                 </div>
@@ -2148,26 +2153,110 @@
                 <p>Explore our most frequently booked destinations</p>
             </div>
             <div class="tours-grid">
-                <div class="tour-card" onclick="window.location.href='gorakhpur-to-nepal.html'" style="cursor: pointer;">
+                <!-- Nearby Destinations (Gorakhpur ke paas) -->
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-kushinagar.html'" style="cursor: pointer;">
                     <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Nepal Destination" class="tour-destination-img" onerror="this.style.display='none';">
-                        <i class="fas fa-mountain fa-3x tour-fallback-icon"></i>
-                        <div class="tour-badge">Best Seller</div>
+                        <img src="taxiverz.jpeg" alt="Kushinagar Temple" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-temple-buddhist fa-3x tour-fallback-icon"></i>
+                        <div class="tour-badge">Nearby</div>
                     </div>
                     <div class="tour-content">
-                        <h3>Gorakhpur To Nepal Taxi Service</h3>
+                        <h3>Gorakhpur To Kushinagar Taxi Service</h3>
                         <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
-                        <p class="tour-description">Comfortable and safe taxi service from Gorakhpur to Nepal with experienced drivers.</p>
+                        <p class="tour-description">Visit the place where Lord Buddha attained Mahaparinirvana from Gorakhpur.</p>
                         <div class="tour-price-action">
-                            <div class="tour-price">₹4,500 <span>onwards</span></div>
+                            <div class="tour-price">₹1,800 <span>onwards</span></div>
                             <button class="btn-primary">Book Now</button>
                         </div>
                     </div>
                 </div>
 
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-deoria.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.jpeg" alt="Deoria" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-city fa-3x tour-fallback-icon"></i>
+                        <div class="tour-badge">Nearby</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Deoria Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Quick and comfortable ride from Gorakhpur to Deoria with reliable service.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹800 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-basti.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.jpeg" alt="Basti" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-city fa-3x tour-fallback-icon"></i>
+                        <div class="tour-badge">Nearby</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Basti Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Affordable taxi service from Gorakhpur to Basti with professional drivers.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹600 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-mau.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.jpeg" alt="Mau" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-city fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Mau Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Comfortable journey from Gorakhpur to Mau with experienced driversand taxi.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹1,600 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-azamgarh.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.jpeg" alt="Azamgarh" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-city fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Azamgarh Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Safe and reliable taxi service from Gorakhpur to Azamgarh with experienced drivers.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹1,800 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-janakpur.html'" style="cursor: pointer;">
+                    <div class="tour-image">
+                        <img src="taxiverz.jpeg" alt="Janakpur Temple" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-temple-hindu fa-3x tour-fallback-icon"></i>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Gorakhpur To Janakpur Taxi Service</h3>
+                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
+                        <p class="tour-description">Visit the birthplace of Goddess Sita in Janakpur, Nepal Tour from Gorakhpur.</p>
+                        <div class="tour-price-action">
+                            <div class="tour-price">₹5,200 <span>onwards</span></div>
+                            <button class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Destinations -->
                 <div class="tour-card" onclick="window.location.href='gorakhpur-to-ayodhya.html'" style="cursor: pointer;">
                     <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Ayodhya Temple" class="tour-destination-img" onerror="this.style.display='none';">
+                        <img src="taxiverz.jpeg" alt="Ayodhya Temple" class="tour-destination-img" onerror="this.style.display='none';">
                         <i class="fas fa-temple-hindu fa-3x tour-fallback-icon"></i>
                         <div class="tour-badge">Popular</div>
                     </div>
@@ -2184,7 +2273,7 @@
 
                 <div class="tour-card" onclick="window.location.href='gorakhpur-to-banaras.html'" style="cursor: pointer;">
                     <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Varanasi Ghats" class="tour-destination-img" onerror="this.style.display='none';">
+                        <img src="taxiverz.jpeg" alt="Varanasi Ghats" class="tour-destination-img" onerror="this.style.display='none';">
                         <i class="fas fa-city fa-3x tour-fallback-icon"></i>
                     </div>
                     <div class="tour-content">
@@ -2198,25 +2287,9 @@
                     </div>
                 </div>
 
-                <div class="tour-card" onclick="window.location.href='gorakhpur-to-dehradun.html'" style="cursor: pointer;">
-                    <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Dehradun Hills" class="tour-destination-img" onerror="this.style.display='none';">
-                        <i class="fas fa-mountain fa-3x tour-fallback-icon"></i>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Gorakhpur To Dehradun Taxi Service</h3>
-                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
-                        <p class="tour-description">Journey to the gateway of Garhwal Himalayas to enjoy everything from Gorakhpur .</p>
-                        <div class="tour-price-action">
-                            <div class="tour-price">₹6,800 <span>onwards</span></div>
-                            <button class="btn-primary">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="tour-card" onclick="window.location.href='gorakhpur-to-lucknow.html'" style="cursor: pointer;">
                     <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Lucknow Monument" class="tour-destination-img" onerror="this.style.display='none';">
+                        <img src="taxiverz.jpeg" alt="Lucknow Monument" class="tour-destination-img" onerror="this.style.display='none';">
                         <i class="fas fa-city fa-3x tour-fallback-icon"></i>
                     </div>
                     <div class="tour-content">
@@ -2230,114 +2303,49 @@
                     </div>
                 </div>
 
-                <div class="tour-card" onclick="window.location.href='gorakhpur-to-kushinagar.html'" style="cursor: pointer;">
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-patna.html'" style="cursor: pointer;">
                     <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Kushinagar Temple" class="tour-destination-img" onerror="this.style.display='none';">
-                        <i class="fas fa-temple-buddhist fa-3x tour-fallback-icon"></i>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Gorakhpur To Kushinagar Taxi Service</h3>
-                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
-                        <p class="tour-description">Visit the place where Lord Buddha attained Mahaparinirvana from Gorakhpur.</p>
-                        <div class="tour-price-action">
-                            <div class="tour-price">₹1,800 <span>onwards</span></div>
-                            <button class="btn-primary">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tour-card" onclick="window.location.href='ayodhya-to-prayagraj.html'" style="cursor: pointer;">
-                    <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Prayagraj Sangam" class="tour-destination-img" onerror="this.style.display='none';">
-                        <i class="fas fa-water fa-3x tour-fallback-icon"></i>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Ayodhya To Prayagraj Taxi Service</h3>
-                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
-                        <p class="tour-description">Travel from Ayodhya to Prayagraj for the holy confluence of rivers from gorakhpur.</p>
-                        <div class="tour-price-action">
-                            <div class="tour-price">₹2,500 <span>onwards</span></div>
-                            <button class="btn-primary">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tour-card" onclick="window.location.href='gorakhpur-to-janakpur.html'" style="cursor: pointer;">
-                    <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Janakpur Temple" class="tour-destination-img" onerror="this.style.display='none';">
-                        <i class="fas fa-temple-hindu fa-3x tour-fallback-icon"></i>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Gorakhpur To Janakpur Taxi Service</h3>
-                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
-                        <p class="tour-description">Visit the birthplace of Goddess Sita in Janakpur, Nepal Tour from Gorakhpur.</p>
-                        <div class="tour-price-action">
-                            <div class="tour-price">₹5,200 <span>onwards</span></div>
-                            <button class="btn-primary">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tour-card">
-                    <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Lucknow City" class="tour-destination-img" onerror="this.style.display='none';">
+                        <img src="taxiverz.jpeg" alt="Patna" class="tour-destination-img" onerror="this.style.display='none';">
                         <i class="fas fa-city fa-3x tour-fallback-icon"></i>
-                        <div class="tour-badge">Popular</div>
                     </div>
                     <div class="tour-content">
-                        <h3>Lucknow To Gorakhpur Taxi Service</h3>
+                        <h3>Gorakhpur To Patna Taxi Service</h3>
                         <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
-                        <p class="tour-description">Comfortable journey from Lucknow to Gorakhpur with professional drivers.</p>
+                        <p class="tour-description">Comfortable journey from Gorakhpur to Patna with professional drivers and premium service.</p>
                         <div class="tour-price-action">
-                            <div class="tour-price">₹4,000 <span>onwards</span></div>
+                            <div class="tour-price">₹5,600 <span>onwards</span></div>
                             <button class="btn-primary">Book Now</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="tour-card">
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-nepal.html'" style="cursor: pointer;">
                     <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Banaras Ghats" class="tour-destination-img" onerror="this.style.display='none';">
-                        <i class="fas fa-temple-hindu fa-3x tour-fallback-icon"></i>
+                        <img src="taxiverz.jpeg" alt="Nepal Destination" class="tour-destination-img" onerror="this.style.display='none';">
+                        <i class="fas fa-mountain fa-3x tour-fallback-icon"></i>
+                        <div class="tour-badge">Best Seller</div>
                     </div>
                     <div class="tour-content">
-                        <h3>Banaras To Gorakhpur Taxi Service</h3>
+                        <h3>Gorakhpur To Nepal Taxi Service</h3>
                         <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
-                        <p class="tour-description">Spiritual journey from Banaras to Gorakhpur with comfortable travel.</p>
+                        <p class="tour-description">Comfortable and safe taxi service from Gorakhpur to Nepal with experienced drivers.</p>
                         <div class="tour-price-action">
-                            <div class="tour-price">₹4,000 <span>onwards</span></div>
+                            <div class="tour-price">₹4,500 <span>onwards</span></div>
                             <button class="btn-primary">Book Now</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="tour-card">
+                <div class="tour-card" onclick="window.location.href='gorakhpur-to-delhi.html'" style="cursor: pointer;">
                     <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Delhi Capital" class="tour-destination-img" onerror="this.style.display='none';">
+                        <img src="taxiverz.jpeg" alt="Delhi Capital" class="tour-destination-img" onerror="this.style.display='none';">
                         <i class="fas fa-building fa-3x tour-fallback-icon"></i>
                         <div class="tour-badge">Long Distance</div>
                     </div>
                     <div class="tour-content">
                         <h3>Gorakhpur To Delhi Taxi Service</h3>
                         <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
-                        <p class="tour-description">Long distance travel from Gorakhpur to Delhi with premium service.</p>
-                        <div class="tour-price-action">
-                            <div class="tour-price">₹14,500 <span>onwards</span></div>
-                            <button class="btn-primary">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tour-card">
-                    <div class="tour-image">
-                        <img src="taxiverz.avif" alt="Delhi to Gorakhpur" class="tour-destination-img" onerror="this.style.display='none';">
-                        <i class="fas fa-building fa-3x tour-fallback-icon"></i>
-                        <div class="tour-badge">Long Distance</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Delhi To Gorakhpur Taxi Service</h3>
-                        <p class="tour-duration"><i class="fas fa-route"></i> One Way / Round Trip</p>
-                        <p class="tour-description">Premium travel from Delhi to Gorakhpur with experienced drivers.</p>
+                        <p class="tour-description">Long distance travel from Gorakhpur to Delhi with premium service with experienced drivers.</p>
                         <div class="tour-price-action">
                             <div class="tour-price">₹14,500 <span>onwards</span></div>
                             <button class="btn-primary">Book Now</button>
@@ -2354,14 +2362,35 @@
                 <a href="gorakhpur-to-chitwan.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Chitwan</a>
                 <a href="gorakhpur-to-lumbini.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Lumbini</a>
                 <a href="gorakhpur-to-pokhara.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Pokhara</a>
-                <a href="gorakhpur-to-patna.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Patna</a>
+                <a href="gorakhpur-to-kanpur.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Kanpur</a>
             </div>
             <div class="route-links" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1rem;">
                 <a href="gorakhpur-to-bodhgaya.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Bodhgaya</a>
-                <a href="gorakhpur-to-deoria.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Deoria</a>
-                <a href="gorakhpur-to-basti.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Basti</a>
+                <a href="gorakhpur-to-prayagraj.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Prayagraj</a>
+                <a href="gorakhpur-to-jaipur.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Jaipur</a>
+                <a href="gorakhpur-to-mumbai.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Mumbai</a>
+                <a href="gorakhpur-to-kolkata.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Kolkata</a>
+            </div>
+            <div class="route-links" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1rem;">
+                <a href="gorakhpur-to-indore.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Indore</a>
+                <a href="gorakhpur-to-ujjain.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Ujjain</a>
+                <a href="gorakhpur-to-nashik.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Nashik</a>
+                <a href="gorakhpur-to-goa.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Goa</a>
+                <a href="gorakhpur-to-kathmandu.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Kathmandu</a>
+            </div>
+            <div class="route-links" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1rem;">
+                <a href="gorakhpur-to-manokamana.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Manokamana</a>
+                <a href="gorakhpur-to-nainital.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Nainital</a>
+                <a href="raxaul-to-kathmandu.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Raxaul To Kathmandu</a>
+                <a href="raxaul-to-janakpur.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Raxaul To Janakpur</a>
+                <a href="raxaul-to-pokhara.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Raxaul To Pokhara</a>
+            </div>
+            <div class="route-links" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1rem;">
+                <a href="raxaul-to-chitwan.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Raxaul To Chitwan</a>
+                <a href="raxaul-to-muktinath.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Raxaul To Muktinath</a>
+                <a href="raxaul-to-lumbini.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Raxaul To Lumbini</a>
+                <a href="raxaul-to-manokamana.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Raxaul To Manokamana</a>
                 <a href="gorakhpur-to-azamgarh.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Azamgarh</a>
-                <a href="gorakhpur-to-mau.html" style="background: #e74c3c; color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; text-align: center; font-size: 12px; transition: all 0.3s; border: 2px solid #e74c3c;">Gorakhpur To Mau</a>
             </div>
         </div>
     </section>
@@ -2568,32 +2597,54 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="./taxiverz.avif" alt="Taxiverz Logo" class="footer-logo-img">
-                    </div>
-                    <p>Your trusted travel partner</p>
+    <footer class="footer" style="background: #000; color: #efefef; padding: 40px 0 20px; position: relative;">
+        <!-- Visitor Counter -->
+        <div style="position: absolute; bottom: 10px; right: 20px; background: rgba(255,255,255,0.1); padding: 10px 15px; border-radius: 8px; backdrop-filter: blur(10px);">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-users" style="color: #ff5800; font-size: 1.2rem;"></i>
+                <div>
+                    <div style="font-size: 0.75rem; color: #ccc; text-transform: uppercase; letter-spacing: 1px;">Total Visitors</div>
+                    <div id="visitor-count" style="font-size: 1.5rem; font-weight: bold; color: #fff; font-family: 'Courier New', monospace;">0</div>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+918576000083">+91-8576000083</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:cabtaxiverz@gmail.com">cabtaxiverz@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <img src="taxiverz.avif" alt="Taxiverz Logo" style="height: 60px; margin-bottom: 1rem;">
+                    <h3 style="color: #d88d0e; margin-bottom: 1rem;">Taxiverz</h3>
+                    <p>Your trusted travel partner for comfortable and safe journeys across India and Nepal.</p>
+                </div>
+                <div>
+                    <h3 style="color: #d88d0e; margin-bottom: 1rem;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: #efefef; text-decoration: none; transition: color 0.3s;">Home</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="car-rental.html" style="color: #efefef; text-decoration: none; transition: color 0.3s;">Car Rental</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="wedding.html" style="color: #efefef; text-decoration: none; transition: color 0.3s;">Wedding Cars</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: #efefef; text-decoration: none; transition: color 0.3s;">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #d88d0e; margin-bottom: 1rem;">Our Websites</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="https://nepaltoursandtravels.com/" target="_blank" style="color: #efefef; text-decoration: none; transition: color 0.3s;">Nepal Tours & Travels</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="https://luxurycarrentalss.com/" target="_blank" style="color: #efefef; text-decoration: none; transition: color 0.3s;">Luxury Car Rentals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #d88d0e; margin-bottom: 1rem;">Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+918576000083" style="color: #efefef; text-decoration: none;">+91-8576000083</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:cabtaxiverz@gmail.com" style="color: #efefef; text-decoration: none;">cabtaxiverz@gmail.com</a></p>
                     <p><i class="fas fa-map-marker-alt"></i> Railway Station Gate No-1, Gorakhpur, UP-273001</p>
                     <p><i class="fas fa-map-marker-alt"></i> Shop No-4 Chaudhari Heights Above Swarna Hotel, Warje, Pune, Maharashtra-411058</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/1Bpqo1dubB/" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/travel_nepal_club?igsh=cGI0czA0Y2s0MzJm" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://www.facebook.com/share/1Bpqo1dubB/" target="_blank" style="color: #efefef; margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: #efefef; margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/travel_nepal_club?igsh=cGI0czA0Y2s0MzJm" target="_blank" style="color: #efefef; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div style="text-align: center; padding-top: 20px; border-top: 1px solid #a2a0a1; color: #a2a0a1;">
                 <p>&copy; 2024 Taxiverz. All rights reserved.</p>
             </div>
         </div>
@@ -2662,7 +2713,49 @@
     </div>
 
     <script>
-        // HAMBURGER MENU - STANDALONE WORKING VERSION
+        // VISITOR COUNTER - Real tracking using localStorage
+        (function() {
+            // Get current count from localStorage
+            var count = localStorage.getItem('taxiverz_visitor_count');
+            
+            if (!count) {
+                count = 0;
+            } else {
+                count = parseInt(count);
+            }
+            
+            // Increment count
+            count++;
+            
+            // Save back to localStorage
+            localStorage.setItem('taxiverz_visitor_count', count);
+            
+            // Display count with animation
+            var counterElement = document.getElementById('visitor-count');
+            if (counterElement) {
+                var start = count - 1;
+                var end = count;
+                var duration = 1000;
+                var startTime = null;
+                
+                function animate(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    var progress = (currentTime - startTime) / duration;
+                    
+                    if (progress < 1) {
+                        var current = Math.floor(start + (end - start) * progress);
+                        counterElement.textContent = current.toLocaleString();
+                        requestAnimationFrame(animate);
+                    } else {
+                        counterElement.textContent = end.toLocaleString();
+                    }
+                }
+                
+                requestAnimationFrame(animate);
+            }
+        })();
+    </script>
+        <!-- // HAMBURGER MENU - STANDALONE WORKING VERSION
         window.addEventListener('load', function() {
             console.log('Hamburger menu script loaded');
             
@@ -2749,8 +2842,6 @@
                 }
             });
         });
-    </script>
-    <script src="script.js"></script>
         
         // Booking modal functionality
         const modal = document.getElementById('bookingModal');
@@ -2865,6 +2956,7 @@
                 document.body.style.overflow = 'auto';
             }
         });
-    </script>
+    </script> -->
+    <script src="script.js"></script>
 </body>
 </html>
