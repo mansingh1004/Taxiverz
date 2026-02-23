@@ -145,16 +145,15 @@ document.querySelectorAll('.trip-btn').forEach(btn => {
     });
 });
 
-// Booking Form Handler
-const bookingBtn = document.querySelector('.booking-form .btn-primary');
-if (bookingBtn) {
-    bookingBtn.addEventListener('click', function(e) {
+// Booking Form Handler - Hero Section
+const heroBookingBtn = document.querySelector('.hero-form .booking-form .btn-primary');
+if (heroBookingBtn) {
+    heroBookingBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        
-        const pickupInput = document.querySelector('.booking-form input[placeholder="Pickup Location"]');
-        const dropInput = document.querySelector('.booking-form input[placeholder="Drop Location"]');
-        const datetimeInput = document.querySelector('.booking-form input[type="datetime-local"]');
-        const carTypeSelect = document.querySelector('.booking-form select');
+        const pickupInput = document.querySelector('.hero-form .booking-form input[placeholder="Pickup Location"]');
+        const dropInput = document.querySelector('.hero-form .booking-form input[placeholder="Drop Location"]');
+        const datetimeInput = document.querySelector('.hero-form .booking-form input[type="datetime-local"]');
+        const carTypeSelect = document.querySelector('.hero-form .booking-form select');
         
         if (pickupInput && dropInput && datetimeInput && carTypeSelect) {
             const from = pickupInput.value;
@@ -167,6 +166,28 @@ if (bookingBtn) {
             } else {
                 alert('Please fill in all booking details.');
             }
+        }
+    });
+}
+
+// Quick Booking Form Handler - Rent Section
+const quickBookingForm = document.querySelector('.rent-section .booking-form');
+if (quickBookingForm) {
+    quickBookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const pickup = this.querySelector('input[placeholder="Pickup Location"]').value;
+        const drop = this.querySelector('input[placeholder="Drop Location"]').value;
+        const date = this.querySelector('input[type="date"]').value;
+        const time = this.querySelector('input[type="time"]').value;
+        const carType = this.querySelector('select').value;
+        
+        if (pickup && drop && date && time && carType) {
+            const message = `New Booking Request:\nPickup: ${pickup}\nDrop: ${drop}\nDate: ${date}\nTime: ${time}\nCar Type: ${carType}`;
+            const whatsappUrl = `https://wa.me/918576000083?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            this.reset();
+        } else {
+            alert('Please fill all fields!');
         }
     });
 }
